@@ -210,13 +210,6 @@
 
           
           <li>
-            <a href="/blog/archive/">Archives|存档</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/blog/about/">About|关于</a>
           </li>
           
@@ -224,7 +217,7 @@
 
           
           <li>
-            <a href="/blog/tags/">Tags|标签</a>
+            <a href="/blog/archive/">Archives|存档</a>
           </li>
           
           
@@ -232,6 +225,13 @@
           
           <li>
             <a href="/blog/categories/">Categories|分类</a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a href="/blog/tags/">Tags|标签</a>
           </li>
           
           
@@ -287,11 +287,10 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 
-  <!-- CDN: jsdelivr start -->
   <style type="text/css">
     header.intro-header {
        /*page*/
-        background-image: url('https://cdn.jsdelivr.net/gh/AaronYang2333/blog/AaronYang2333.github.io/blog/img/header_img/archive_bg2.jpg');
+        background-image: url('/blog/img/header_img/archive_bg2.jpg');
       
     }
 
@@ -301,7 +300,6 @@
       }
     
   </style>
-  <!-- CDN: jsdelivr end -->
 
 
 
@@ -679,29 +677,6 @@
   <!-- ThemeColor end -->
 
 
-
-  <!-- CDN: jsdelivr start -->
-  <script type="text/javascript">
-    let imgsUrl = document.getElementsByTagName("img");
-    let imgUrl = Array.from(imgsUrl);
-
-    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
-    let gh = "AaronYang2333";
-    let ghPages = gh + ".github.io";
-    let pagePath = "archives/2021/index.html";
-    let jsdelivrurl;
-    if (pagePath.indexOf("index.html") != -1) {
-      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
-    }else{
-      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
-    }
-    imgUrl.forEach(item => {
-      let oldUrl = item.getAttribute("src");
-      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..","");
-      item.setAttribute("src", newUrl);
-    });
-  </script>
-  <!-- CDN: jsdelivr end -->
 
 
 
