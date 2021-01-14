@@ -59,7 +59,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="aaron yang&#39;s IT blog" />
   <meta name="keyword" content="Aaron,Yang,AYAYAY,23333,aaron,Bo,USC,dsci,csci,551,552,553,570,560,544,blog,Blog" />
-  <link rel="shortcut icon" href="/blog/img/avatar/roguerabbit.jpg" />
+  <link rel="shortcut icon" href="/blog/img/avatar/mona_lisa.ico" />
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -116,6 +116,10 @@
   
 
   
+  <!-- gitment start -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css" />
+  <!-- gitment end -->
+  
 
   
   <!-- gitalk start -->
@@ -168,7 +172,7 @@
 <!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
 <script>
   ((window.gitter = {}).chat = {}).options = {
-    room: 'your-community/your-room'
+    room: 'eclipse/deeplearning4j'
   };
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
@@ -200,7 +204,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/blog/">Home</a>
+            <a href="/blog/">Home|主页</a>
           </li>
 
           
@@ -217,27 +221,13 @@
 
           
           <li>
-            <a href="/blog/archive/">Archives|存档</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
 
           
-          <li>
-            <a href="/blog/tags/">Tags|标签</a>
-          </li>
-          
-          
-
-          
-          <li><a class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+          <li><a class="popup-trigger" title="Search"><span class="search-icon"></span>Search|搜索</a></li>
           
         </ul>
       </div>
@@ -296,7 +286,7 @@
 
     
       #signature {/*signature*/
-        background-image: url('/blog/img/signature/vincent-white.png');
+        background-image: url('/blog/img/signature/ay-white.png');
       }
     
   </style>
@@ -363,9 +353,33 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
+        <a href="#ElasticSearch7" title="ElasticSearch7" rel="1">ElasticSearch7</a>
+        
       </div>
 
       <!-- 标签列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="ElasticSearch7">
+          <span class="tag-text">ElasticSearch7</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/blog/2021/01/13/ES7语法备忘录/">
+            <h2 class="post-title">
+              ES7语法备忘录
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
       
 
     </div>
@@ -419,11 +433,23 @@
               <a target="_blank" href="https://www.douban.com/people/byang971">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-imdb fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
           
+
+          
+            <li>
+              <a target="_blank" href="https://leetcode-cn.com/u/aaronyang2333">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
 
         </ul>
         <p class="copyright text-muted">
@@ -528,7 +554,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	
 	<div class="popup search-popup local-search-popup">
   <span class="popup-btn-close">
-    ESC
+    ESC | 退出
   </span>
   <div class="container">
     <div class="row">
@@ -541,7 +567,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="Search|搜索..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>

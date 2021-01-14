@@ -16,13 +16,6 @@
   </url>
   
   <url>
-    <loc>https://aaronyang2333.github.io/blog/tags/index.html</loc>
-    
-    <lastmod>2021-01-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://aaronyang2333.github.io/blog/categories/index.html</loc>
     
     <lastmod>2021-01-14</lastmod>
@@ -31,13 +24,6 @@
   
   <url>
     <loc>https://aaronyang2333.github.io/blog/about/index.html</loc>
-    
-    <lastmod>2021-01-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aaronyang2333.github.io/blog/archive/index.html</loc>
     
     <lastmod>2021-01-14</lastmod>
     
@@ -53,7 +39,7 @@
 
   
   <url>
-    <loc>https://aaronyang2333.github.io/blog/tags/ElasticSearch7/</loc>
+    <loc>https://aaronyang2333.github.io/blog/tags/CRUD/</loc>
     <lastmod>2021-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -67,5 +53,12 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://aaronyang2333.github.io/blog/categories/ElasticSearch7/</loc>
+    <lastmod>2021-01-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>

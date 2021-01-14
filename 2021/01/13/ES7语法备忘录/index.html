@@ -59,7 +59,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="aaron yang&#39;s IT blog" />
   <meta name="keyword" content="Aaron,Yang,AYAYAY,23333,aaron,Bo,USC,dsci,csci,551,552,553,570,560,544,blog,Blog" />
-  <link rel="shortcut icon" href="/blog/img/avatar/roguerabbit.jpg" />
+  <link rel="shortcut icon" href="/blog/img/avatar/mona_lisa.ico" />
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -116,6 +116,10 @@
   
 
   
+  <!-- gitment start -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css" />
+  <!-- gitment end -->
+  
 
   
   <!-- gitalk start -->
@@ -168,7 +172,7 @@
 <!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
 <script>
   ((window.gitter = {}).chat = {}).options = {
-    room: 'your-community/your-room'
+    room: 'eclipse/deeplearning4j'
   };
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
@@ -200,7 +204,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/blog/">Home</a>
+            <a href="/blog/">Home|主页</a>
           </li>
 
           
@@ -217,27 +221,13 @@
 
           
           <li>
-            <a href="/blog/archive/">Archives|存档</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
 
           
-          <li>
-            <a href="/blog/tags/">Tags|标签</a>
-          </li>
-          
-          
-
-          
-          <li><a class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+          <li><a class="popup-trigger" title="Search"><span class="search-icon"></span>Search|搜索</a></li>
           
         </ul>
       </div>
@@ -296,7 +286,7 @@
 
     
       #signature {/*signature*/
-        background-image: url('/blog/img/signature/vincent-white.png');
+        background-image: url('/blog/img/signature/ay-white.png');
       }
     
   </style>
@@ -315,7 +305,7 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/blog/tags/#ElasticSearch7" title="ElasticSearch7">ElasticSearch7</a>
+              <a class="tag" href="/blog/tags/#CRUD" title="CRUD">CRUD</a>
               
               <a class="tag" href="/blog/tags/#Syntax" title="Syntax">Syntax</a>
               
@@ -332,16 +322,16 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              需要花 <span class="post-count">1</span> 分钟读完
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">8</span> In Total
+              总共 <span class="post-count">8</span> 个字儿
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
             <span class="meta">
-              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+              已经有 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 个人读过了
             </span>
             <!-- 不蒜子统计 end -->
             <!-- WordCount end -->
@@ -413,7 +403,7 @@
         <!-- tip start -->
         <div class="tip">
           <p>
-            If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+            不建议Ctrl+CV转载，多看看得了。(Not recommend you to reprint this article, come over to my site more frequently is enough.)
           </p>
         </div>
         <!-- tip end -->
@@ -477,7 +467,7 @@
   var gitalk = new Gitalk({
     clientID: '56adb2063b0402bb9bc8',
     clientSecret: 'db54e085182780138cff7e15bd9415c335111e6a',
-    repo: 'https://github.com/AaronYang2333/AaronYang2333',
+    repo: 'aaronyang2333.github.io/blog',
     owner: 'AaronYang2333',
     admin: 'AaronYang2333',
     id: 'Wed Jan 13 2021 23:06:39 GMT-0800', // Ensure uniqueness and length less than 50
@@ -515,6 +505,61 @@
 
 
 <!-- 2. gitment comment -->
+
+<!-- gitment start -->
+<!-- Docs:https://github.com/imsun/gitment -->
+
+<div id="blog_comments"></div>
+<!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+
+<script>
+  const myTheme = {
+    render(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'gitment-container gitment-root-container'
+
+      // your custom component
+      container.appendChild(instance.renderSomething(state, instance))
+      container.appendChild(instance.renderHeader(state, instance))
+      container.appendChild(instance.renderEditor(state, instance))
+      container.appendChild(instance.renderComments(state, instance))
+      container.appendChild(instance.renderFooter(state, instance))
+      return container
+    },
+    renderSomething(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'hello_visitor'
+      if (state.user.login) {
+        container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+      }
+      return container
+    }
+  }
+
+  const gitment = new Gitment({
+    id: 'Wed Jan 13 2021 23:06:39 GMT-0800', // optional
+    owner: 'AaronYang2333',
+    repo: 'aaronyang2333.github.io/blog',
+    oauth: {
+      client_id: 'bb6dc79a147b7896b8e1',
+      client_secret: 'f1f1d3bc26f29569677365cc3de98ae0b17d7b1d'
+    },
+    desc: '不想说点儿啥么？(leave some comments!)',
+    perPage: '10',
+    maxCommentHeight: '250',
+    theme: myTheme,
+    // ... For more available options, check out the documentation below
+  })
+
+  gitment.render('blog_comments')
+  // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
+</script>
+
+<!-- gitment end -->
 
 
 
@@ -556,7 +601,7 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/blog/tags/#ElasticSearch7" title="ElasticSearch7">ElasticSearch7</a>
+            <a class="tag" href="/blog/tags/#CRUD" title="CRUD">CRUD</a>
             
             <a class="tag" href="/blog/tags/#Syntax" title="Syntax">Syntax</a>
             
@@ -673,11 +718,23 @@
               <a target="_blank" href="https://www.douban.com/people/byang971">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-imdb fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
           
+
+          
+            <li>
+              <a target="_blank" href="https://leetcode-cn.com/u/aaronyang2333">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
 
         </ul>
         <p class="copyright text-muted">
@@ -782,7 +839,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	
 	<div class="popup search-popup local-search-popup">
   <span class="popup-btn-close">
-    ESC
+    ESC | 退出
   </span>
   <div class="container">
     <div class="row">
@@ -795,7 +852,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="Search|搜索..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
