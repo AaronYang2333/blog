@@ -138,7 +138,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/tags/Hexo/">
+  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/tags/Syntax/">
   <title>
     
     Current Tab
@@ -210,28 +210,28 @@
 
           
           <li>
-            <a href="/blog/about/">About</a>
+            <a href="/blog/archive/">Archives|存档</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/categories/">Categories</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/tags/">Tags</a>
+            <a href="/blog/tags/">Tags|标签</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/archive/">Archives</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
@@ -287,10 +287,11 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 
+  <!-- CDN: jsdelivr start -->
   <style type="text/css">
     header.intro-header {
        /*page*/
-        background-image: url('/blog/img/header_img/archive_bg2.jpg');
+        background-image: url('https://cdn.jsdelivr.net/gh/AaronYang2333/blog/AaronYang2333.github.io/blog/img/header_img/archive_bg2.jpg');
       
     }
 
@@ -300,6 +301,7 @@
       }
     
   </style>
+  <!-- CDN: jsdelivr end -->
 
 
 
@@ -384,8 +386,8 @@
 
       
       <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-          <span class="tag-text">2020</span>
+        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
+          <span class="tag-text">2021</span>
         </span>
         <ul>
           
@@ -394,11 +396,11 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
           <li>
-            04-17
+            01-13
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2020/04/17/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
+            <a href="/blog/2021/01/13/ES7语法备忘录/" style="color: #0085a1">
               <span>
-                Hexo-Theme-LiveMyLife
+                ES7语法备忘录
               </span>
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -451,11 +453,11 @@
   <div class="tags">
     
     
-    <a href="/blog/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
+    <a href="/blog/tags/#ElasticSearch7" title="ElasticSearch7" rel="1">ElasticSearch7</a>
     
     
     
-    <a href="/blog/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="1">Hexo-Theme-LiveMyLife</a>
+    <a href="/blog/tags/#Syntax" title="Syntax" rel="1">Syntax</a>
     
     
   </div>
@@ -527,8 +529,8 @@
 <div class="widget">
   <ul>
     
-    <a href="../../2020/04/17/Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
+    <a href="../../2021/01/13/ES7%E8%AF%AD%E6%B3%95%E5%A4%87%E5%BF%98%E5%BD%95/">
+      <li>ES7语法备忘录</li>
     </a>
     
   </ul>
@@ -552,25 +554,13 @@
     <!-- <h5>ARCHIVES</h5> -->
     <h5><a href="/blog/archives/">ARCHIVES</a></h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
 
         <hr>
     
         <!-- Categories -->
-
-<!-- <h5>categories</h5> -->
-<h5><a href="/blog/categories/">CATEGORIES</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/blog/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-  </ul>
-</div>
 
 
         <hr>
@@ -618,6 +608,17 @@
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.douban.com/people/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-imdb fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
@@ -678,6 +679,29 @@
   <!-- ThemeColor end -->
 
 
+
+  <!-- CDN: jsdelivr start -->
+  <script type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "AaronYang2333";
+    let ghPages = gh + ".github.io";
+    let pagePath = "tags/Syntax/index.html";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }else{
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..","");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
 
 
 

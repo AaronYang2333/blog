@@ -141,7 +141,7 @@
   <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/categories/">
   <title>
     
-    Categories - Current Tab
+    Categories|分类 - Current Tab
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -210,28 +210,28 @@
 
           
           <li>
-            <a href="/blog/about/">About</a>
+            <a href="/blog/archive/">Archives|存档</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/categories/">Categories</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/tags/">Tags</a>
+            <a href="/blog/tags/">Tags|标签</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/archive/">Archives</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
@@ -287,10 +287,11 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 
+  <!-- CDN: jsdelivr start -->
   <style type="text/css">
     header.intro-header {
        /*page*/
-        background-image: url('/blog/img/header_img/categories_bg.jpg');
+        background-image: url('https://cdn.jsdelivr.net/gh/AaronYang2333/blog/AaronYang2333.github.io/blog/img/header_img/categories_bg.jpg');
       
     }
 
@@ -300,6 +301,7 @@
       }
     
   </style>
+  <!-- CDN: jsdelivr end -->
 
 
 
@@ -313,9 +315,9 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
           <div class="site-heading">
-            <h1>Categories</h1>
+            <h1>Categories|分类</h1>
             <!--<hr class="small">-->
-            <span class="subheading">Hi , here is Categories ....</span>
+            <span class="subheading">瞎逼逼呗~~~</span>
           </div>
           
         </div>
@@ -363,37 +365,9 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="1">Hexo-Theme-LiveMyLife</a>
-        
       </div>
 
       <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="Hexo-Theme-LiveMyLife">
-          <span class="tag-text">Hexo-Theme-LiveMyLife</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/blog/2020/04/17/Hexo-Theme-LiveMyLife/">
-            <h2 class="post-title">
-              Hexo-Theme-LiveMyLife
-            </h2>
-            
-            <h3 class="post-subtitle">
-              A succinct hexo theme...
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
       
 
     </div>
@@ -437,6 +411,17 @@
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.douban.com/people/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-imdb fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
@@ -497,6 +482,29 @@
   <!-- ThemeColor end -->
 
 
+
+  <!-- CDN: jsdelivr start -->
+  <script type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "AaronYang2333";
+    let ghPages = gh + ".github.io";
+    let pagePath = "categories/index.html";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    }else{
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..","");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
 
 
 
