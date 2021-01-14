@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aaronyang2333.github.io/blog/404.html</loc>
+    
+    <lastmod>2021-01-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://aaronyang2333.github.io/blog/tags/index.html</loc>
     
     <lastmod>2021-01-14</lastmod>
@@ -16,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://aaronyang2333.github.io/blog/archive/index.html</loc>
-    
-    <lastmod>2021-01-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://aaronyang2333.github.io/blog/about/index.html</loc>
     
     <lastmod>2021-01-14</lastmod>
@@ -30,14 +30,14 @@
   </url>
   
   <url>
-    <loc>https://aaronyang2333.github.io/blog/2020/04/17/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://aaronyang2333.github.io/blog/archive/index.html</loc>
     
     <lastmod>2021-01-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aaronyang2333.github.io/blog/404.html</loc>
+    <loc>https://aaronyang2333.github.io/blog/2020/04/17/Hexo-Theme-LiveMyLife/</loc>
     
     <lastmod>2021-01-14</lastmod>
     
