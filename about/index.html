@@ -214,14 +214,14 @@
 
           
           <li>
-            <a href="/blog/about/">About|关于</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/categories/">Categories|分类</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
@@ -465,34 +465,10 @@
     
         <!-- Categories -->
 
-<!-- <h5>categories</h5> -->
-<h5><a href="/blog/categories/">CATEGORIES</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/blog/categories/#ElasticSearch7">
-      <li>ElasticSearch7</li>
-    </a>
-    
-  </ul>
-</div>
-
 
         <hr>
     
         
-<!-- <h5>VISITORS</h5> -->
-<h5><a href="/blog/">VISITORS</a></h5>
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
 
         <hr>
     
@@ -997,6 +973,21 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
