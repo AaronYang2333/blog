@@ -227,7 +227,7 @@
           
 
           
-          <li><a class="popup-trigger" title="Search"><span class="search-icon"></span>Search|搜索</a></li>
+          <li><a class="popup-trigger" style="cursor:pointer !important;"><span class="search-icon"></span>Search|搜索</a></li>
           
         </ul>
       </div>
@@ -280,7 +280,7 @@
   <style type="text/css">
     header.intro-header {
        /*page*/
-        background-image: url('/blog/img/header_img/categories_bg.jpg');
+        background-image: url('/blog/img/header_img/coast.jpg');
       
     }
 
@@ -349,9 +349,33 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
+        <a href="#CSCI 570" title="CSCI 570" rel="1">CSCI 570</a>
+        
       </div>
 
       <!-- 标签列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="CSCI 570">
+          <span class="tag-text">CSCI 570</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/blog/2021/01/21/AIA-ch1-Q-A/">
+            <h2 class="post-title">
+              $$[Algorithms \, In \, Action]-CH1\,Review$$
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
       
 
     </div>
@@ -853,21 +877,6 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
