@@ -172,7 +172,7 @@
 <!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
 <script>
   ((window.gitter = {}).chat = {}).options = {
-    room: 'eclipse/deeplearning4j'
+    room: 'ay_blog/community'
   };
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
@@ -214,14 +214,14 @@
 
           
           <li>
-            <a href="/blog/categories/">Categories|分类</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/about/">About|关于</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
@@ -505,7 +505,7 @@
 </li>
 <li><strong>(T/F)</strong> If f(n) = Ω(g(n)) then <script type="math/tex">2^{f(n)} = Ω(2^{g(n)})</script>.<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"><blockquote>
 <ul>
-<li><strong>False</strong> prove it by contradiction. e.g. f(n) = 2n, g(n) = 4n.<br>when c = 0.25 f(n) &gt;= c * g(n). but <script type="math/tex">2^{f(n)} = 4^n, 2^{g(n)} = 16^n</script>, <script type="math/tex">2^{f(n)} <= 2^{g(n)}</script>. so this statement is wrong.</li>
+<li><strong>False</strong> prove it by contradiction. <br><br>e.g. f(n) = 2n, g(n) = 4n. when c = 0.25. f(n) &gt;= c * g(n). <br><br>but <script type="math/tex">2^{f(n)} = 4^n, 2^{g(n)} = 16^n</script>, <script type="math/tex">2^{f(n)} <= 2^{g(n)}</script>. so this statement is wrong.</li>
 </ul>
 </blockquote>
 </li>
@@ -544,30 +544,43 @@
 <li><p>Prove g(n) = Ω(f(n)) if and only if f(n) = O(g(n)).</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong> To prove a theorem of the form <em>A IF AND ONLY IF B</em>, you first prove <em>IF A THEN B</em>, then you prove <em>IF B THEN A</em>, and that’s enough to complete the proof. <blockquote>
+<p><strong>Proof</strong></p>
+<ul>
+<li>$A \rightrightarrows B$<blockquote>
+<p>g(n) = Ω(f(n)), means g(n) &gt;=  c * f(n), c &gt; 0 <br><br>we multiply 1 / c on both side, and we have <script type="math/tex">\frac{1}{c} \cdot g((n)</script> &gt;= f(n) which equals to <br>  f(n) &lt;= <script type="math/tex">{b} \cdot g((n)</script>, <em>b</em> &gt; 0 , so we can say f(n) = O(g(n)).</p>
+</blockquote>
+</li>
+<li>$B \leftleftarrows A$<blockquote>
+<p>f(n) = O(g(n)), means f(n) &lt;= c * g(n), c &gt; 0 <br><br>we multiply 1 / c on both side, and we have <script type="math/tex">\frac{1}{c} \cdot f((n)</script> &lt;= g(n) which equals to <br>  g(n) &gt;= <script type="math/tex">{b} \cdot f((n)</script>, <em>b</em> &gt; 0 , so we can say g(n) = Ω(f(n)).</p>
+</blockquote>
+</li>
 </ul>
 </blockquote>
 </li>
-<li><p>Prove or disprove f(n) = O(g(n)) implies <script type="math/tex">2^f(n) = O(2^g(n))</script>.<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
+</ul>
+</blockquote>
+</li>
+<li><p>Prove or disprove f(n) = O(g(n)) implies <script type="math/tex">2^{f(n)} = O(2^{g(n)})</script>.<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong> prove it by contradiction. <br><br>e.g. f(n) = 2n, g(n) = n. when c = 4. f(n) &lt;= c * g(n).<br><br>but <script type="math/tex">2^{f(n)} = 4^n, 2^{g(n)} = 2^n</script>, <script type="math/tex">2^{f(n)} >= 2^{g(n)}</script>. so this statement is wrong.</li>
 </ul>
 </blockquote>
 </li>
 <li><p>Arrange the following functions<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
-<blockquote>
 <script type="math/tex; mode=display">log(n^n),\, n^2,\, n^{log(n)},\, nlog(log(n)),\, 2^{log(n)},\, (log(n))^2,\, n^{\sqrt{2}}</script><p>in increasing order of growth rate, with g(n) following f(n) in your list if and only if f(n) = O(g(n)).</p>
+<blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong> we can follow this order<br>$O(1) &lt;= O(log(n)) &lt;= O((log(n))^C) &lt;= O(C^{log(n)}) &lt;= O(n) &lt;= O(n \cdot log(n)) &lt;= O(n^C) &lt;= O((log(n))!) &lt;= O(n^{log(n)}) &lt;= O(C^n)$<br>And we can simply some of them in first place.<br><script type="math/tex">① \, log(n^n) = n \cdot log(n) \, ⑤ \, 2^{log_2 n} = log_2 2^n = n \cdot 1 = n</script>,<br>So , finally, we have <br><br>$nlog(n),\, n^2,\, n^{log(n)},\, nlog(log(n)),\, n,\, (log(n))^2,\, n^{\sqrt{2}}$ <br><br>$O(1) \Rightarrow None$<br>$O(log(n)) \Rightarrow None$<br>$O((log(n))^C) \Rightarrow ⑥$<br>$O(C^{log(n)}) \Rightarrow None$<br>$O(n) \Rightarrow ⑤$<br>$O(n \cdot log(n)) \Rightarrow ①④ since \, n &gt; log(n) \Rightarrow ④①$<br>$O(n^C) \Rightarrow ②⑦ since \, \sqrt(2) &lt; 2 \, and \, log(n)\, grow \,slower \,than \,exponential \,func $<br>$\quad especially \,when \,a &gt; 1 \, so, ⑦②$<br>$O((log(n))!) \Rightarrow None$<br>$O(n^{log(n)}) \Rightarrow ③$<br>$O(C^n) \Rightarrow None$<br><br>the answers is: ⑥&lt;⑤&lt;④&lt;①&lt;⑦&lt;②&lt;③<br>$(log(n))^2,\, 2^{log(n)},\, nlog(log(n)),\, log(n^n),\, n^{\sqrt{2}}, \, n^2,\, n^{log(n)}$</li>
 </ul>
 </blockquote>
 </li>
 <li><p>Arrange the following functions</p>
-<blockquote>
 <script type="math/tex; mode=display">4^{log(n)},\, \sqrt{log(n)},\, n^{log(log(n))},\, (\sqrt{2})^{log(n)},\, 2^{\sqrt{2log(n)}},\, n^{1/log(n)},\, (log(n))!</script><p>in increasing order of growth rate with g(n) following f(n) in your list if and only if f(n) = O(g(n)).</p>
+<blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong> we can follow this order<br>$O(1) &lt;= O(log(n)) &lt;= O((log(n))^C) &lt;= O(C^{log(n)}) &lt;= O(n) &lt;= O(n \cdot log(n)) &lt;= O(n^C) &lt;= O((log(n))!) &lt;= O(n^{log(n)}) &lt;= O(C^n)$<br>And we can simply some of them in first place.<br><script type="math/tex">① \, 4^{log_2 n} = (2^2)^{log(n)} = 2^{2*log(n)} = 2^{log(n^2)} = log_2 2^{n^2} = n^2</script>,<br><br><script type="math/tex">⑥ \, n^{1/log(n)} = n^{log_2 2/log_2 n} = n^{log_n 2} = 2</script>,<br>So , finally, we have <br><br>$n^2, \, \sqrt{log(n)},\, n^{log(log(n))},\, (\sqrt{2})^{log(n)},\, 2^{\sqrt{2log(n)}},\, 2, \, (log(n))!$ <br><br>$O(1) \Rightarrow ⑥$<br>$O(log(n)) \Rightarrow None$<br>$O((log(n))^C) \Rightarrow ②$<br>$O(C^{log(n)}) \Rightarrow ④⑤ \quad (\sqrt{2})^{log(n)} = 2^{log(n) / 2} $<br>$\quad \,we \, can \, just \, compare \, log(n) / 2 \, v.s. \sqrt{2 \cdot log(n)} \, so, ⑤④$<br>$O(n) \Rightarrow None$<br>$O(n \cdot log(n)) \Rightarrow None$<br>$O(n^C) \Rightarrow ①$<br>$O((log(n))!) \Rightarrow ⑦$<br>$O(n^{log(n)}) \Rightarrow ③$<br>$O(C^n) \Rightarrow None$ <br><br>the answers is: ⑥&lt;②&lt;⑤&lt;④&lt;①&lt;⑦&lt;③<br>$(log(n))^2,\, 2^{log(n)},\, nlog(log(n)),\, log(n^n),\, n^{\sqrt{2}}, \, n^2,\, n^{log(n)}$</li>
 </ul>
 </blockquote>
 </li>
@@ -575,79 +588,79 @@
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void bigOh1 (int n):</span><br><span class="line">  <span class="keyword">for</span> <span class="attribute">i</span>=1 <span class="keyword">to</span> n</span><br><span class="line">    <span class="attribute">j</span>=1;</span><br><span class="line">    <span class="keyword">while</span> j &lt; n</span><br><span class="line">      j = j<span class="number">*2</span>;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong> <script type="math/tex">O(n \cdot log(n))</script><br><img src="ans_5.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
 <li><p>What is the Big-O runtime complexity of the following function?<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> bigOh2 (<span class="keyword">int</span> n):</span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">"a"</span>;</span><br><span class="line">  string <span class="keyword">str</span> = bigOh2(n<span class="number">-1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">str</span> + <span class="keyword">str</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> bigOh3 (<span class="built_in">int</span> n):</span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">"a"</span>;</span><br><span class="line">  <span class="built_in">string</span> str = bigOh3(n<span class="number">-1</span>);</span><br><span class="line">  <span class="keyword">return</span> str + str;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong> <script type="math/tex">O(n \cdot 2^n)</script><br><img src="ans_6.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
 <li><p>What is the Big-Theta runtime complexity of the following function? Here <em>find_max</em> finds the maximum element in the array L[0], L[1], …, L[n - 1].<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void bigTheta (<span class="built_in">int</span>[] L, <span class="built_in">int</span> <span class="built_in">n</span>)<span class="symbol">:</span></span><br><span class="line">  while (<span class="built_in">n</span> &gt; <span class="number">0</span>)</span><br><span class="line">    <span class="built_in">find</span> _ <span class="built_in">max</span>(L, <span class="built_in">n</span>);</span><br><span class="line">    <span class="built_in">n</span> = <span class="built_in">n</span>/<span class="number">4</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void bigOh2 (<span class="built_in">int</span>[] L, <span class="built_in">int</span> <span class="built_in">n</span>)<span class="symbol">:</span></span><br><span class="line">  while (<span class="built_in">n</span> &gt; <span class="number">0</span>)</span><br><span class="line">    find_max(L, <span class="built_in">n</span>);</span><br><span class="line">    <span class="built_in">n</span> = <span class="built_in">n</span>/<span class="number">4</span>;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong><br><img src="ans_7.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
 <li><p>The complete graph on n vertices, denoted <script type="math/tex">K_n</script>, is a simple graph in which there is an edge between every pair of distinct vertices. What is the height of the DFS tree for the complete graph <script type="math/tex">K_n</script>? What is the height of the BFS tree for the complete graph <script type="math/tex">K_n</script>?</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
 <li><p>We are interested in finding a simple path in a directed acyclic graph that visits all vertices once and only once. Design a linear time algorithm to determine if there is such a path in a given DAG.</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
 <li><p>Prove that a complete graph <script type="math/tex">K_5</script> is not a planar graph.</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
 <li><p>Prove that a complete bipartite graph <script type="math/tex">K_{3,3}</script> is not a planar graph.</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
 <li><p>In a connected bipartite graph, is the bipartition unique? Justify your answer.</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
 <li><p>Given a directed graph G = (V, E) and a particular node v ∈ V, design a linear time algorithm to determine whether v is in a triangle of edges (a cycle of length 3).</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
 <li><p>Design a linear time algorithm which, given an undirected graph G = (V, E) and a particular edge e ∈ E, determines whether G has a cycle containing e.</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
 <li><p>Given an undirected graph G = (V, E), prove that S is an independent set if and only if V - S is a vertex cover</p>
 <blockquote>
 <ul>
-<li>Solution</li>
+<li><strong>Solution</strong></li>
 </ul>
 </blockquote>
 </li>
@@ -657,6 +670,10 @@
         <hr>
         <!-- Pager -->
         <ul class="pager">
+          
+          <li class="previous">
+            <a href="/blog/2021/01/24/AIA-ch2-Q-A/" data-toggle="tooltip" data-placement="top" title="$$[Algorithms \, In \, Action]-CH2\,Amortized Analysis$$">&larr; Previous Post</a>
+          </li>
           
           
         </ul>
