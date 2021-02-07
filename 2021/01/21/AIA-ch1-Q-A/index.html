@@ -305,9 +305,9 @@
               
               <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
               
-              <a class="tag" href="/blog/tags/#Graph" title="Graph">Graph</a>
-              
               <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
+              
+              <a class="tag" href="/blog/tags/#Graph" title="Graph">Graph</a>
               
             </div>
             <h1>$$[Algorithms \, In \, Action]-CH1\,Review$$</h1>
@@ -418,9 +418,7 @@
 </blockquote>
 </li>
 <li><em>If G is a connected planar graph with V vertices, E edges, and F faces, then V - E + F = 2</em><blockquote>
-<ul>
-<li>faces represent disjoint area.</li>
-</ul>
+<p>faces represent disjoint area.<br><img src="v_e_f_2.png"  style="display:inline;box-shadow: none !important;"></p>
 </blockquote>
 </li>
 <li><em>In any simple connected planar graph with at least 3 vertices, <script type="math/tex">E < 3 \cdot V - 6</script></em></li>
@@ -487,13 +485,13 @@
 </li>
 </ul>
 </li>
-<li><strong>(T/F)</strong> Any function which is <script type="math/tex">Ω(log(n))</script> is also <script type="math/tex">Ω(log(log(n)))</script>.<blockquote>
+<li><strong>(T/F)</strong> Any function which is <script type="math/tex">Ω(log(n))</script> is also <script type="math/tex">Ω(log(log(n)))</script>.<img src="lecture.png" style="width:30px;display:inline;box-shadow: none !important;"><blockquote>
 <ul>
 <li><strong>True</strong>. Assume there is a f(n) &gt;= c <em> log(n).<br><br>and we also knew, log(n) &gt; log(log(n)) in any suitation. so we have f(n) &gt;= c </em> log(n) &gt; c * log(log(n)). </li>
 </ul>
 </blockquote>
 </li>
-<li><strong>(T/F)</strong> If f(n) = Θ(g(n)) then g(n) = Θ(f(n))<blockquote>
+<li><strong>(T/F)</strong> If f(n) = Θ(g(n)) then g(n) = Θ(f(n))<img src="lecture.png" style="width:30px;display:inline;box-shadow: none !important;"><blockquote>
 <ul>
 <li><strong>True</strong>. becasue f(n) = Θ(g(n)), we have <script type="math/tex">c_1 \cdot g(n) <= f(n) <= c_2 \cdot g(n)</script>. LHS multiplt <script type="math/tex">1 / c_1</script> =&gt; <script type="math/tex">g(n) <= \frac{1}{c_1}f(n)</script>. RHS multiplt <script type="math/tex">1 / c_2</script> =&gt; <script type="math/tex">\frac{1}{c_2}f(n) <= g(n)</script>. <br>In all, we have <script type="math/tex">\frac{1}{c_2}f(n) <= g(n) <= \frac{1}{c_1}f(n) \,</script> =&gt; <script type="math/tex">\, b_1f(n) <= g(n) <= b_2f(n)</script></li>
 </ul>
@@ -579,7 +577,7 @@
 </blockquote>
 </li>
 <li><p>Arrange the following functions</p>
-<script type="math/tex; mode=display">4^{log(n)},\, \sqrt{log(n)},\, n^{log(log(n))},\, (\sqrt{2})^{log(n)},\, 2^{\sqrt{2log(n)}},\, n^{1/log(n)},\, (log(n))!</script><p>in increasing order of growth rate with g(n) following f(n) in your list if and only if f(n) = O(g(n)).</p>
+<script type="math/tex; mode=display">4^{log(n)},\, \sqrt{log(n)},\, n^{log(log(n))},\, (\sqrt{2})^{log(n)},\, 2^{\sqrt{2log(n)}},\, n^{1/log(n)},\, (log(n))!</script><p>in increasing order of growth rate with g(n) following f(n) in your list if and only if f(n) = O(g(n)).<img src="lecture.png" style="width:30px;display:inline;box-shadow: none !important;"></p>
 <blockquote>
 <ul>
 <li><strong>Solution</strong> we can follow this order<br>$O(1) &lt;= O(log(n)) &lt;= O((log(n))^C) &lt;= O(C^{log(n)}) &lt;= O(n) &lt;= O(n \cdot log(n)) &lt;= O(n^C) &lt;= O((log(n))!) &lt;= O(n^{log(n)}) &lt;= O(C^n)$<br>And we can simply some of them in first place.<br><script type="math/tex">① \, 4^{log_2 n} = (2^2)^{log(n)} = 2^{2*log(n)} = 2^{log(n^2)} = log_2 2^{n^2} = n^2</script>,<br><br><script type="math/tex">⑥ \, n^{1/log(n)} = n^{log_2 2/log_2 n} = n^{log_n 2} = 2</script>,<br>So , finally, we have <br><br>$n^2, \, \sqrt{log(n)},\, n^{log(log(n))},\, (\sqrt{2})^{log(n)},\, 2^{\sqrt{2log(n)}},\, 2, \, (log(n))!$ <br><br>$O(1) \Rightarrow ⑥$<br>$O(log(n)) \Rightarrow None$<br>$O((log(n))^C) \Rightarrow ②$<br>$O(C^{log(n)}) \Rightarrow ④⑤ \quad (\sqrt{2})^{log(n)} = 2^{log(n) / 2} $<br>$\quad \,we \, can \, just \, compare \, log(n) / 2 \, v.s. \sqrt{2 \cdot log(n)} \, so, ⑤④$<br>$O(n) \Rightarrow None$<br>$O(n \cdot log(n)) \Rightarrow None$<br>$O(n^C) \Rightarrow ①$<br>$O((log(n))!) \Rightarrow ⑦$<br>$O(n^{log(n)}) \Rightarrow ③$<br>$O(C^n) \Rightarrow None$ <br><br>the answers is: ⑥&lt;②&lt;⑤&lt;④&lt;①&lt;⑦&lt;③<br>$(log(n))^2,\, 2^{log(n)},\, nlog(log(n)),\, log(n^n),\, n^{\sqrt{2}}, \, n^2,\, n^{log(n)}$</li>
@@ -883,9 +881,9 @@
             
             <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
             
-            <a class="tag" href="/blog/tags/#Graph" title="Graph">Graph</a>
-            
             <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
+            
+            <a class="tag" href="/blog/tags/#Graph" title="Graph">Graph</a>
             
           </div>
         </section>

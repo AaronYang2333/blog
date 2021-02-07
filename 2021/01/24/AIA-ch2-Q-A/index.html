@@ -305,9 +305,9 @@
               
               <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
               
-              <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
-              
               <a class="tag" href="/blog/tags/#Amortized Analysis" title="Amortized Analysis">Amortized Analysis</a>
+              
+              <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
               
             </div>
             <h1>$$[Algorithms \, In \, Action]-CH2\,Amortized Analysis$$</h1>
@@ -322,11 +322,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              需要花 <span class="post-count">4</span> 分钟读完
+              需要花 <span class="post-count">7</span> 分钟读完
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              总共 <span class="post-count">759</span> 个字儿
+              总共 <span class="post-count">1.2k</span> 个字儿
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -386,25 +386,43 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>For any monotonic functions, <em>f</em>, <em>g</em> from the positive integers to the positive integers, we say <strong>f(n) = O(g(n))</strong> or <strong>f(n) = Ω(g(n))</strong> or <strong>f(n) = Θ(g(n))</strong></p>
-<h3 id="Concepts"><a href="#Concepts" class="headerlink" title="Concepts"></a>Concepts</h3><ul>
+        <h3 id="Amortized-Analysis"><a href="#Amortized-Analysis" class="headerlink" title="Amortized Analysis"></a>Amortized Analysis</h3><p>In a sequence of operations, the worst-case time does not occur often in each oper ation; some operations may be cheap, some may be expensive. Therefore, a traditional worst-case per operation analysis <strong>Big O</strong> can give an overly pessimistic bound. </p>
+<blockquote>
+<p>That why we need Amortized analysis.</p>
+</blockquote>
+<p>There are generally three methods for performing amortized analysis:</p>
+<ol>
+<li>The aggregate method computes the upper bound <strong>T(n)</strong> on the total cost of <strong>n</strong> operations. The amortized cost is given by <strong>T(n)/n</strong>. In this method each operation will get the same amortized cost, even if there are several types of operations in the sequence.</li>
+<li>The accounting method (or the banker’s method) computes the individual cost of each operation. We assign different charges to each operation; some operations may charge more or less than they actually cost. The amount we charge an operation is called its amortized cost.</li>
+<li>The potential method (or the physicist’s method). We won’t use a potential method in this course</li>
+</ol>
+<h4 id="Unbounded-Array"><a href="#Unbounded-Array" class="headerlink" title="Unbounded Array"></a>Unbounded Array</h4><h4 id="Binary-Counter"><a href="#Binary-Counter" class="headerlink" title="Binary Counter"></a>Binary Counter</h4><h3 id="Topological-Sort"><a href="#Topological-Sort" class="headerlink" title="Topological Sort"></a>Topological Sort</h3><ul>
 <li><strong>T(n)</strong> counts the # of steps, where <em>n</em> is the input size.</li>
 <li><strong>O</strong> big O, <script type="math/tex">\exists \, c</script> which <em>c</em> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">f(n)     \leqslant c \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
 <li><strong>Ω</strong> big Omega, <script type="math/tex">\exists \, c</script> which <em>c</em> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">f(n)     \geqslant c \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
 <li><strong>Θ</strong> big Theta, <script type="math/tex">\exists \, {c_1} \, and \, {c_2}</script> which <script type="math/tex">{c_1}</script> &gt; 0 and <script type="math/tex">{c_2}</script> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">{c_1} \cdot g(n) \leqslant f(n)    \leqslant {c_2} \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
+</ul>
+<h3 id="Hamiltonian-Path"><a href="#Hamiltonian-Path" class="headerlink" title="Hamiltonian Path"></a>Hamiltonian Path</h3><ul>
+<li>finding the <strong>longest path</strong> in a directed acyclic graph (DAG)</li>
+</ul>
+<h3 id="Strongly-Connected-Graph"><a href="#Strongly-Connected-Graph" class="headerlink" title="Strongly Connected Graph"></a>Strongly Connected Graph</h3><ul>
+<li>how to prove a graph is a strongly connected graph<br><img src="s_c_graph.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 <h3 id="Review-Q-amp-A"><a href="#Review-Q-amp-A" class="headerlink" title="Review Q&amp;A"></a>Review Q&amp;A</h3><ol>
 <li><p>What is the definition of the amortized cost using the aggregate method? <img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
 <blockquote>
 <ul>
 <li><strong>Solution</strong></li>
+<li>The aggregate method computes the upper bound <strong>T(n)</strong> on the total cost of <strong>n</strong> operations. The amortized cost is given by <strong>T(n)/n</strong>. In this method each operation will get the same amortized cost, even if there are several types of operations in the sequence.</li>
 </ul>
 </blockquote>
 </li>
 <li><p>(T/F) Amortized analysis is used to determine the average runtime complexity of an algorithm.</p>
 <blockquote>
 <ul>
-<li><strong>True</strong></li>
+<li><strong>False</strong></li>
+<li>what is “average complexity”? that is ask you to compute the runtime complexity of a single operation when given <strong>n</strong> random input.(focus on this operation and compute all best case, bad case and so on. )</li>
+<li>“Amortized analysis” is another concept, actually this analysis is looking at the worst-case run time per operation, rather than per input, that’s the difference. (focus on a sequene of operation and in worst-case.)</li>
 </ul>
 </blockquote>
 </li>
@@ -412,13 +430,15 @@
 <blockquote>
 <ul>
 <li><strong>True</strong></li>
+<li>that’s what the definition says.</li>
 </ul>
 </blockquote>
 </li>
-<li><p>(T/F) The total amortized cost of a sequence of n operations gives a lower bound on the total actual cost of the sequence.</p>
+<li><p>(T/F) The total amortized cost of a sequence of <strong>n</strong> operations gives a lower bound on the total actual cost of the sequence.</p>
 <blockquote>
 <ul>
-<li><strong>True</strong></li>
+<li><strong>False</strong></li>
+<li>The aggregate method computes the upper bound <strong>T(n)</strong> on the total cost of n operations.</li>
 </ul>
 </blockquote>
 </li>
@@ -426,25 +446,27 @@
 <blockquote>
 <ul>
 <li><strong>True</strong></li>
+<li>In practice, programming languages, like JAVA and Python extend array capacity by multiple 1.6, which means increasing the array size by 60%. And ithey still can remain the constant runtime complexity. So if only increase 5%, it will work as well.</li>
 </ul>
 </blockquote>
 </li>
 <li><p>(T/F) If an operation takes O(1) expected time, then it takes O(1) amortized time.</p>
 <blockquote>
 <ul>
-<li><strong>True</strong></li>
+<li><strong>False</strong></li>
+<li>“expected time” equals to “avgerage time”. </li>
 </ul>
 </blockquote>
 </li>
-<li><p>Suppose you have a data structure such that a sequence of n operations has an amortized cost of O(n * log n). What could be the highest actual time of a single operation?</p>
+<li><p>Suppose you have a data structure such that a sequence of n operations has an amortized cost of <strong>O(n * log n)</strong>. What could be the highest actual time of a single operation?</p>
 <blockquote>
 <ul>
 <li><strong>Solution</strong></li>
+<li>less than <strong>O(n * log n)</strong></li>
 </ul>
 </blockquote>
 </li>
-<li><p>What is the worst-case runtime complexity of searching in an amortized dictionary?</p>
-<blockquote>
+<li>What is the worst-case runtime complexity of searching in an amortized dictionary?<blockquote>
 <ul>
 <li><strong>Solution</strong></li>
 </ul>
@@ -455,14 +477,14 @@
 <li><p>You have a stack data type, and you need to implement a FIFO queue. The stack has the usual POP and PUSH operations, and the cost of each operation is 1. The FIFO has two operations: ENQUEUE and DEQUEUE. We can implement a FIFO queue using two stacks. What is the amortized cost of ENQUEUE and DEQUEUE operations?</p>
 <blockquote>
 <ul>
-<li><strong>Solution</strong></li>
+<li><strong>Solution</strong><br><img src="dequeue.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
 <li><p>We are incrementing a binary counter, where flipping the i-th bit costs i + 1. Flipping the lowest-order bit costs 0 + 1 = 1, the next bit costs 1 + 1 = 2, the next bit costs 2 + 1 = 3, and so on. What is the amortized cost per operation for a sequence of n increments, starting from zero?</p>
 <blockquote>
 <ul>
-<li><strong>Solution</strong></li>
+<li><strong>Solution</strong><br><img src="binary_counter.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
@@ -483,10 +505,24 @@
 <li><p>Suppose we perform a sequence of n operations on a data structure in which the i-th operation costs i if i is an exact power of 2 and 1 otherwise. Use aggregate analysis to determine the amortized cost per operation.</p>
 <blockquote>
 <ul>
-<li><strong>Solution</strong></li>
+<li><strong>Solution</strong><br>Assume $n = 2^k$ operations, and these operation can be split into two parts.</li>
 </ul>
+<ol>
+<li>if <em>i</em> is an exact power of 2, $cost(i) = 2^i$, which $i \in k$. <br><blockquote>
+<p>part 1 cost = $\Sigma^{k}_{i=0} 2^i$</p>
 </blockquote>
 </li>
+<li>if not, the remaining operations will cost 1.  <br><blockquote>
+<p>part 2 cost = $n - k - 1$</p>
+</blockquote>
+</li>
+</ol>
+<p>So all cost is:<br><br>$Cost = \Sigma^{k}_{i=0} 2^i + n - k - 1$ <br><br>$\quad \quad = 2^{k + 1} - 1 + n - k - 1$ <br><br>$\quad \quad = 2 \cdot n + n - k - 2$ <br><br>$\quad \quad = 3 \cdot n - k - 2$ <br><br>$\quad \quad = 3 \cdot n - 2 - log_2 n$ <br></p>
+</blockquote>
+</li>
+</ol>
+<p>So cost per operation = $\frac{3 \cdot n - 2 - log_2 n}{n} = O(3)$</p>
+<ol>
 <li><p>Suppose we perform a sequence of n operations on a data structure in which the i-th operation costs i if i is an exact power of 4 and 1 otherwise. Use aggregate analysis to determine the amortized cost per operation.</p>
 <blockquote>
 <ul>
@@ -701,7 +737,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Concepts"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Concepts</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Amortized-Analysis"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Amortized Analysis</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Unbounded-Array"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Unbounded Array</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Binary-Counter"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Binary Counter</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Topological-Sort"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Topological Sort</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hamiltonian-Path"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Hamiltonian Path</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Strongly-Connected-Graph"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Strongly Connected Graph</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
         
         </div>
       </aside>
@@ -725,9 +761,9 @@
             
             <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
             
-            <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
-            
             <a class="tag" href="/blog/tags/#Amortized Analysis" title="Amortized Analysis">Amortized Analysis</a>
+            
+            <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
             
           </div>
         </section>
