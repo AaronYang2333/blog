@@ -216,14 +216,14 @@
 
           
           <li>
-            <a href="/blog/about/">About|关于</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/categories/">Categories|分类</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
@@ -322,11 +322,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              需要花 <span class="post-count">5</span> 分钟读完
+              需要花 <span class="post-count">6</span> 分钟读完
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              总共 <span class="post-count">837</span> 个字儿
+              总共 <span class="post-count">969</span> 个字儿
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -386,7 +386,32 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="Review-Q-amp-A"><a href="#Review-Q-amp-A" class="headerlink" title="Review Q&amp;A"></a>Review Q&amp;A</h3><ol>
+        <h3 id="Heap"><a href="#Heap" class="headerlink" title="Heap"></a>Heap</h3><ul>
+<li><p>Three types of heap</p>
+<blockquote>
+<p><strong>Binary Heap</strong></p>
+<blockquote>
+<p>asdasda</p>
+</blockquote>
+<p><strong>Binomial Heap</strong></p>
+<blockquote>
+<p><strong>Definition</strong>: <br>A binomial heap is a collection (a linked list) of at most Celling(log(n)) binomial trees (<u><strong>of unique rank</strong></u>) in increasing order of size where each tree has a heap ordering property.<br><br><strong>Binomial Trees</strong></p>
+<blockquote>
+<p>The binomial tree <script type="math/tex">B_k</script> is defined as </p>
+<ol>
+<li><script type="math/tex">B_0</script> is a single node</li>
+<li><script type="math/tex">B_k</script> is formed by joining two <script type="math/tex">B_{k - 1}</script> trees<br><img src="BT.png"  style="display:inline;box-shadow: none !important;"></li>
+</ol>
+</blockquote>
+</blockquote>
+<p><strong>Fibonacci Heap</strong></p>
+<blockquote>
+<p><u>general idea</u> is to have a more relaxed structure (compared to binomial heaps) that will improve <em>decreaseKey</em> complexity to constant amortized time</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h3 id="Review-Q-amp-A"><a href="#Review-Q-amp-A" class="headerlink" title="Review Q&amp;A"></a>Review Q&amp;A</h3><ol>
 <li><p>What is the worst-case runtime complexity of finding the smallest item in a binary min-heap?<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
 <blockquote>
 <ul>
@@ -454,7 +479,7 @@
 </ul>
 </blockquote>
 </li>
-<li><p><strong>(T/F)</strong> In a binary max-heap with n elements, the worst-case runtime complexity of finding the second largest element is O(1).</p>
+<li><p><strong>(T/F)</strong> In a binary max-heap with <strong>n</strong> elements, the worst-case runtime complexity of finding the second largest element is $O(1)$.</p>
 <blockquote>
 <ul>
 <li><strong>True</strong></li>
@@ -465,42 +490,47 @@
 <blockquote>
 <ul>
 <li><strong>False</strong></li>
-<li>abcd</li>
+<li>It could be any order, but the final result will be the same.</li>
 </ul>
 </blockquote>
 </li>
-<li><strong>(T/F)</strong> Using a binary heap we can sort any array of size n in O(n) time.<blockquote>
+<li><p><strong>(T/F)</strong> Using a binary heap we can sort any array of size n in $O(n)$ time.</p>
+<blockquote>
 <ul>
 <li><strong>False</strong></li>
-<li>abcd</li>
+<li>dont know</li>
 </ul>
 </blockquote>
 </li>
-<li><strong>(T/F)</strong> In a binomial min-heap with n elements, the worst-case runtime complexity of finding the smallest element is O(1).<blockquote>
+<li><p><strong>(T/F)</strong> In a binomial min-heap with <strong>n</strong> elements, the worst-case runtime complexity of finding the smallest element is $O(1)$.</p>
+<blockquote>
 <ul>
-<li><strong>False</strong></li>
-<li>abcd</li>
+<li><strong>True</strong></li>
+<li>this is min-heap, the smallest element will be placed in the top.</li>
 </ul>
 </blockquote>
 </li>
-<li><strong>(T/F)</strong> In a binomial min-heap with n elements, the worst-case runtime complexity of finding the second smallest element is O(1).<blockquote>
+<li><p><strong>(T/F)</strong> In a binomial min-heap with <strong>n</strong> elements, the worst-case runtime complexity of finding the second smallest element is $O(1)$.</p>
+<blockquote>
 <ul>
-<li><strong>False</strong></li>
-<li>abcd</li>
+<li><strong>True</strong></li>
+<li>same reason I think.</li>
 </ul>
 </blockquote>
 </li>
-<li><strong>(T/F)</strong> By using a binomial heap we can sort data of size n in O(n) time.<blockquote>
+<li><p><strong>(T/F)</strong> By using a binomial heap we can sort data of size n in $O(n)$ time.</p>
+<blockquote>
 <ul>
 <li><strong>False</strong></li>
-<li>abcd</li>
+<li>could sort <strong>n</strong> elements in $O(nlog(n))$ time.</li>
 </ul>
 </blockquote>
 </li>
-<li><strong>(T/F)</strong> Given a Fibonacci heap of size n, the maximum number of trees is that heap is n.<blockquote>
+<li><p><strong>(T/F)</strong> Given a Fibonacci heap of size <strong>n</strong>, the maximum number of trees is that heap is <strong>n</strong>.</p>
+<blockquote>
 <ul>
 <li><strong>False</strong></li>
-<li>abcd</li>
+<li>dont know</li>
 </ul>
 </blockquote>
 </li>
@@ -513,19 +543,18 @@
 </ul>
 <blockquote>
 <ul>
-<li><strong>Solution</strong></li>
+<li><strong>Solution</strong><br><img src="heap.gif"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
 <li><p>Devise an algorithm of merging two binary heaps. What is its runtime complexity?</p>
 <blockquote>
 <ul>
-<li><strong>Solution</strong></li>
-<li>abcd</li>
+<li><strong>Solution</strong><br><img src="e2.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
-<li>Suppose you have two binary min-heaps, A and B, with a total of n elements between them. You want to discover if A and B have a key in common. Devise an algorithm to this problem that takes O(n log n) time.<blockquote>
+<li>Suppose you have two binary min-heaps, A and B, with a total of <strong>n</strong> elements between them. You want to discover if A and B have a key in common. Devise an algorithm to this problem that takes $O(n \cdot log(n))$ time.<blockquote>
 <ul>
 <li><strong>Solution</strong></li>
 <li>abcd</li>
@@ -535,15 +564,14 @@
 <li><p>The values 1, 2, 3, …, 63 are all inserted (in any order) into an initially empty minheap. What is the smallest number that could be a leaf node?</p>
 <blockquote>
 <ul>
-<li><strong>Solution</strong></li>
-<li>abcd</li>
+<li><strong>Solution</strong><br><img src="e4.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
 <li><p>Prove that it is impossible construct a min-heap (not necessarily binary) in a comparison-based model with both the following properties:</p>
 <ul>
-<li>a. deleteMin() runs in O(1)</li>
-<li>b. buildHeap() runs in O(n), where n is the input size.</li>
+<li>a. deleteMin() runs in $O(1)$</li>
+<li>b. buildHeap() runs in $O(n)$, where n is the input size.</li>
 </ul>
 <blockquote>
 <ul>
@@ -552,7 +580,7 @@
 </ul>
 </blockquote>
 </li>
-<li><p>Given an unsorted array of size n, devise a heap-based algorithm that finds the k-th largest element in the array. What is its runtime complexity?</p>
+<li><p>Given an unsorted array of size <strong>n</strong>, devise a heap-based algorithm that finds the k-th largest element in the array. What is its runtime complexity?</p>
 <blockquote>
 <ul>
 <li><strong>Solution</strong></li>
@@ -567,17 +595,18 @@
 </ul>
 </blockquote>
 </li>
-<li>Given a stream of data (its size is unknown in advance), devise a heap-based algorithm that finds the k-th largest element in the array. Your algorithm must take at most O(k) extra space. What is its runtime complexity?<blockquote>
+<li><p>Given a stream of data (its size is unknown in advance), devise a heap-based algorithm that finds the k-th largest element in the array. Your algorithm must take at most $O(k)$ extra space. What is its runtime complexity?</p>
+<blockquote>
 <ul>
-<li><strong>Solution</strong></li>
-<li>abcd</li>
+<li><strong>Solution</strong><br><img src="e8.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
-<li>Given a stream of data (its size is unknown in advance), devise a heap-based algorithm that finds the median of elements read so far. What is its runtime complexity?<blockquote>
+<li><p>Given a stream of data (its size is unknown in advance), devise a heap-based algorithm that finds the median of elements read so far. What is its runtime complexity?</p>
+<blockquote>
 <ul>
 <li><strong>Solution</strong></li>
-<li>abcd</li>
+<li>use <em>Exercise 8</em>‘s Online Algorithm</li>
 </ul>
 </blockquote>
 </li>
@@ -635,6 +664,10 @@
         <hr>
         <!-- Pager -->
         <ul class="pager">
+          
+          <li class="previous">
+            <a href="/blog/2021/02/15/AIA-ch4-Q-A/" data-toggle="tooltip" data-placement="top" title="$$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$">&larr; Previous</a>
+          </li>
           
           
           <li class="next">
@@ -822,7 +855,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Heap"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Heap</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
         
         </div>
       </aside>
@@ -1411,21 +1444,6 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>

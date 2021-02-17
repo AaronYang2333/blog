@@ -71,12 +71,12 @@
 
   <!-- Pygments Highlight CSS -->
   
-<link rel="stylesheet" href="../../css/highlight.css">
-<link rel="stylesheet" href="../../css/widget.css">
-<link rel="stylesheet" href="../../css/rocket.css">
-<link rel="stylesheet" href="../../css/signature.css">
-<link rel="stylesheet" href="../../css/catalog.css">
-<link rel="stylesheet" href="../../css/livemylife.css">
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/widget.css">
+<link rel="stylesheet" href="../../../../css/rocket.css">
+<link rel="stylesheet" href="../../../../css/signature.css">
+<link rel="stylesheet" href="../../../../css/catalog.css">
+<link rel="stylesheet" href="../../../../css/livemylife.css">
 
 
   
@@ -142,10 +142,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/tags/Review/">
+  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/2021/02/15/AIA-ch4-Q-A/">
   <title>
     
-    Current Tab
+    $$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$ - Current Tab
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -281,8 +281,8 @@
 
   <style type="text/css">
     header.intro-header {
-       /*page*/
-        background-image: url('/blog/');
+       /*post*/
+        background-image: url('cruves.png');
       
     }
 
@@ -300,10 +300,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1></h1>
-            <!--<hr class="small">-->
-            <span class="subheading"></span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
+              
+              <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
+              
+              <a class="tag" href="/blog/tags/#Greedy Algorithm" title="Greedy Algorithm">Greedy Algorithm</a>
+              
+            </div>
+            <h1>$$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Aaron Yang on
+              2021-02-15
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              需要花 <span class="post-count">11</span> 分钟读完
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              总共 <span class="post-count">1.8k</span> 个字儿
+            </span>
+            <div class="blank_box"></div>
+            <!-- 不蒜子统计 start -->
+            <span class="meta">
+              已经有 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 个人读过了
+            </span>
+            <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
+            
+
+
           </div>
           
         </div>
@@ -344,240 +378,521 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-	<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+	<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <h3 id="Minimum-Spanning-Trees"><a href="#Minimum-Spanning-Trees" class="headerlink" title="Minimum Spanning Trees"></a>Minimum Spanning Trees</h3><h4 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h4><blockquote>
+<p><img src="Kruskal.png"  style="display:inline;box-shadow: none !important;"></p>
+</blockquote>
+<h4 id="Prim’s-Algorithm"><a href="#Prim’s-Algorithm" class="headerlink" title="Prim’s Algorithm"></a>Prim’s Algorithm</h4><blockquote>
+<p><strong>Complexity</strong></p>
+<blockquote>
+<p><img src="Prim.png"  style="display:inline;box-shadow: none !important;"></p>
+</blockquote>
+</blockquote>
+<h4 id="Dijkstra’s-Algorithm"><a href="#Dijkstra’s-Algorithm" class="headerlink" title="Dijkstra’s Algorithm"></a>Dijkstra’s Algorithm</h4><blockquote>
+<p>sada</p>
+</blockquote>
+<h4 id="Huffman-Tree"><a href="#Huffman-Tree" class="headerlink" title="Huffman Tree"></a>Huffman Tree</h4><h3 id="Review-Q-amp-A"><a href="#Review-Q-amp-A" class="headerlink" title="Review Q&amp;A"></a>Review Q&amp;A</h3><ol>
+<li><p><strong>(T/F)</strong> In the interval scheduling problem, if all intervals are of equal size, a greedy algorithm based on earliest start time will always select the maximum number of compatible intervals.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>we need to sort by the finish time first and then find the compatible intervals.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Any weighted undirected graph with distinct edge weights has exactly one minimum spanning tree.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>maybe differnt order.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Suppose we have a graph where each edge weight value appears at most twice. Then, there are at most two minimum spanning trees in this graph.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>maybe some points are unreachable.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Kruskal’s algorithm can fail in the presence of negative cost edges.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>it should work.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> If a connected undirected graph <script type="math/tex">G = (V, E)</script> has $n = |V|$ vertices and $n + 5$ edges, we can find the minimum spanning tree of <script type="math/tex">G</script> in $O(n)$ runtime.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>neither Kruskal nor Prim can do that.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> The first edge added by Kruskal’s algorithm can be the last edge added by Prim’s algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>True</strong></li>
+<li>possible</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Suppose graph <script type="math/tex">G</script> has a unique minimum spanning tree and graph <script type="math/tex">G_1</script> is obtained by increasing the weight of every edge in <script type="math/tex">G</script> by 1. The MST of <script type="math/tex">G_1</script> must be different from the MST of <script type="math/tex">G</script>.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>could be the same if the new added edge has a same weight of others.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Suppose graph <script type="math/tex">G</script> has a unique minimum spanning tree and graph <script type="math/tex">G_1</script> is obtained by squaring the weight of every edge in <script type="math/tex">G</script>. The MST of <script type="math/tex">G_1</script> may be different from the MST of <script type="math/tex">G</script>.</p>
+<blockquote>
+<ul>
+<li><strong>True</strong></li>
+<li>square a negative num result in a positive integer.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> If path $P$ is the shortest path from $u$ to $v$ and $w$ is a node on the path, then the part of path $P$ from $u$ to $w$ is also the shortest path.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>maybe not</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> If all edges in a connected undirected graph have distinct positive weights, the shortest path between any two vertices is unique.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+<li>maybe there are some edges have same weight.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Suppose we have calculated the shortest paths from a source to all other vertices. If we modify the original graph <script type="math/tex">G</script> such that weights of all edges are doubled, then the shortest path tree of <script type="math/tex">G</script> is also the shortest path tree of the modified graph.</p>
+<blockquote>
+<ul>
+<li><strong>True</strong></li>
+<li>dont know</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Suppose we have calculated the shortest paths from a source to all other vertices. If we modify the original graph, <script type="math/tex">G</script>, such that weights of all edges are increased by 2, then the shortest path tree of <script type="math/tex">G</script> is also the shortest path tree of the modified graph.</p>
+<blockquote>
+<ul>
+<li><strong>True</strong></li>
+<li>dont know</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h3 id="Exercise-Q-amp-A"><a href="#Exercise-Q-amp-A" class="headerlink" title="Exercise Q&amp;A"></a>Exercise Q&amp;A</h3><ol>
+<li><p>At the Perfect Programming Company, the programmers are paired in order to ensure the highest quality of produced code. The productivity of each pair is the speed of the slowest programmer. Assuming an even number of programmers, devise an efficient algorithm for pairing them up so the total productivity of all programmers is maximized.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong><blockquote>
+<p><strong>A simple greedy algorithm works for this problem.</strong> Sort the speeds of the programmers in decreasing order using an optimal sorting algorithm such as merge sort. Consecutive sorted programmers are then paired together starting with pairing the fastest programmer with the second fastest programmer. <br><br>Sorting takes $O(n \cdot log(n))$ time while pairing the programmers takes $O(n)$ time giving a total running time of O(n lg n). <br><br>Correctness: Let $P$ be the set of programmers. The problem exhibits an optimal substructure. Assume the optimal pairing. Given any pair of programmers $(i, j)$ in the optimal pairing, the optimal sum of productivity is just the sum of the productivity of $(i, j)$ with the optimal sum of the productivity of the all pairs in $P − {i, j}$. <br><br> We now show that the greedy choice works by showing that there exists an optimal pairing such that the two fastest programmers are paired together. Assume an optimal pairing where fastest programmer $i$ is not paired with the second faster programmer $j$. Instead let $i$ be paired with $k$ and $j$ be paired with $l$. Let $p_i$ , $p_j$ , $p_k$ and $p_l$ be the programming speeds of $i$, $j$, $k$ and $l$ respectively. We now change the pairings by pairing $i$ with $j$ and $k$ with $l$. The change in the sum of productivities is <center>$$(p_j + min(p_k, p_l)) − (p_k + p_l) ≥ 0$$</center> since $p_j$ is at least as large as the larger of $p_k$ and $p_l$ . We now have an optimal pairing where the fastest programmer is paired with the second fastest programmer. Hence to find the optimal solution, we can keep pairing the two fastest remaining programmers together.</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>A new startup, FastRoute, wants to route information along a path in a communication network, represented as a graph. Each vertex represents a router and each edge a wire between routers. The wires are weighted by the maximum bandwidth they can support. FastRoute comes to you and asks you to develop an algorithm to find the path with maximum bandwidth from any source $s_1, \, s_2, \, …, \, s_k$ to any destination $t_1, \, t_2, \, …, \, t_n$. Devise an algorithm that has the same runtime complexity as Dijkstra’s algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong><blockquote>
+<p>Data structure change: we’ll use a max heap instead of a min heap used in Dijkstra Algorithm.<br><br>Initialization of the min heap. Initially all nodes will have a distance (bandwidth) of zero from $s$, except the starting point $s$ which will have a bandwidth of $\infty$ to itself.<br><br>Change in relaxation step. Based on the definition of a path’s bandwidth, the bandwidth of a path from $s$ to $u$ through $u$’s neighbor $v$ will be $d(u) = min( d(v)$,  $weigth(v,u) )$, because the bandwidth of a path is equal to the bandwidth of its lowest bandwidth edge. Therefore, in the relaxation step, we will be replacing:<br><br>$d(u) = min (d(u), d(v) + weigth(v,u))$<br><br>with<br><br>$d(u) = max (d(u), min (d(v) , weigth(v,u))$<br></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>You are given a set $S$ of $n$ points, labeled $1$ to $n$, on a line. You are also given a set of $k$ finite intervals $I_1, \, …, \, I_k$, where each interval $I_i$, is of the form $[s_i, e_i]$, $I \leq s_i \leq e_i$. Present an efficient algorithm to find the smallest subset $X \subseteq S$ of points such that each interval contains at least one point from $X$. Prove that your solution is optimal.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong><blockquote>
+<p>Sort the intervals in increasing order of $e_i$ . Select the first point as the right end-point of the first interval in this order. Remove all intervals which intersect with this point, and repeat. Proof of correctness is similar to the interval scheduling problem discussed in class. If the algorithm picks points $p_1 &lt; p_2 &lt; · · · &lt; p_k$, and optimum solution picks points $q_1 &lt; q_2 &lt; · · · , q_s$, then prove by induction that $p_i ≥ q_i$ , and so $k ≤ s$.</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>You are given a minimum spanning tree $T$ in a graph $G = (V, E)$. Suppose we remove an edge from $G$, creating a new graph, $G_1$. Assuming that $G_1$ is still connected, devise a linear time algorithm to find an MST in $G_1$.<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong><blockquote>
+<p>Once we delete an edge from $T$, the tree becomes disconnected. We need to find the minimum weight edge that connects two componets, say $T_1$ and $T_2$. Pick any component say $T_2$ and find all edges going to $T_1$. Among them choose the one which has the smallest cost. Runtime: $O(E)$.</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>You are given a minimum spanning tree $T$ in a graph $G = (V, E)$. Suppose we add a new edge (without introducing any new vertices) to $G$, creating a new graph, $G_1$. Assuming that $G_1$ is still connected, devise a linear time algorithm to find an MST in $G_1$.<img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong><br><img src="e5.png"  style="display:inline;box-shadow: none !important;"></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Given graph $G = (V, E)$ with positive edge weights, we know that Dijkstra’s algorithm can be implemented in $O((E + V) \cdot log(V))$ time using a binary heap. Suppose you have been told that the input graph $G$ is a dense graph in which $E = O(V^2)$. Find a way to implement Dijkstra’s algorithm in $O(V^2)$ time.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+<li><strong>O(n)</strong></li>
+</ul>
+</blockquote>
+</li>
+<li>Given a graph, $G = (V, E)$, whose edge weights are integers in the range $[0, W]$, where $W$ is a relatively small integer number, we could run Dijkstra’s algorithm to find the shortest distances from the start vertex to all other vertices. Design a new algorithm that will run in linear time $O(V + E)$ and therefore outperform Dijkstra’s algorithm.<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+<li><strong>O(n)</strong></li>
+</ul>
+</blockquote>
+</li>
+<li>Given a directed acyclic graph, $G = (V, E)$, with nonnegative edge weights and the source $s$, devise a linear time algorithm to find the shortest distances from $s$ to all other vertices.<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+<li><strong>O(n)</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>You are given a graph, $G = (V, E)$, with nonnegative edge weights and the shortest path distances $d(s, u)$ from a source vertex $s$ to all other vertices in $G$. However, you are not given the shortest path tree. Devise a linear time algorithm to find a shortest path from $s$ to a given vertex $t$.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong><blockquote>
+<p>Reverse edges in the original graph. This could be done in linear time (for example, using matrix transform). For all vertices that are connected to a given vertex $t$, find ones such that $d(s, t) = d(s, u) + d(u, t)$. Next, set $u$ as $t$ and repeat this to find new $u$ until $s$ equals to $u$. Nodes saved in the sequence are the shortest path from $s$ to a given vertex $t$.</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>Given a graph, $G = (V, E)$, with nonnegative edge weights and two vertices s and t, the goal is to find the shortest path from $s$ to $t$ with an odd number of edges. Devise an algorithm that has the same runtime complexity as Dijkstra’s algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+<li><strong>O(n)</strong></li>
+</ul>
+</blockquote>
+</li>
+<li>Given a graph,$G = (V, E)$, with nonnegative edge weights and the shortest path distances $d(u, v)$ between any pair of vertices in $G$, suppose we add a new edge (without introducing any new vertices) to $G$, creating a new graph $G_1$. Devise an efficient algorithm (that outperforms Dijkstra’s algorithm in the worst case) to update the shortest path distances $d(u, v)$.<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+<li><strong>O(n)</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Given $n$ rods of lengths $L_1, L_2, …, L_n$, respectively, the goal is to connect all the rods to form a single rod. The length and the cost of connecting two rods are equal to the sum of their lengths. Devise an algorithm to minimize the cost of forming a single rod. </p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+<li><strong>O(n)</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Given a sorted array of frequencies of size $n$, devise a linear time algorithm for building a Huffman tree.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+<li><strong>O(n)</strong></li>
+</ul>
+</blockquote>
+</li>
+</ol>
 
-      
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
 
-      
-
-      <!-- 归档列表 -->
-
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
-          <span class="tag-text">2021</span>
-        </span>
-        <ul>
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            02-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/02/15/AIA-ch4-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
           
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            02-06
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/02/06/AIA-ch3-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH3\, Heap$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
-          
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            01-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/01/24/AIA-ch2-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
-          
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            01-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/01/21/AIA-ch1-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH1\,Review$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          <li class="next">
+            <a href="/blog/2021/02/06/AIA-ch3-Q-A/" data-toggle="tooltip" data-placement="top" title="$$[Algorithms \, In \, Action]-CH3\, Heap$$">Next &rarr;</a>
           </li>
           
         </ul>
-      </div>
-      
 
+        
+        <!-- tip start -->
+        <div class="tip">
+          <p>
+            不建议Ctrl+CV转载，多看看得了。(Not recommend you to reprint this article, come over to my site more frequently is enough.)
+          </p>
+        </div>
+        <!-- tip end -->
+        
 
-    </div>
-  </div>
-</div>
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/blog/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/blog/img/avatar/mona_lisa.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>What&#39;s Up Man!  吃了没yaa!</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/AaronYang2333">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="http://weibo.com/杨博Aaron">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-        <li>
-          <a target="_blank" href="https://www.douban.com/people/byang971">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-      
-
-      
-        <li>
-          <a target="_blank" href="https://leetcode-cn.com/u/aaronyang2333">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-      
-
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- Categories -->
-
-<!-- <h5>categories</h5> -->
-<h5><a href="/blog/categories/">CATEGORIES</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/blog/categories/#CSCI 570">
-      <li>CSCI 570</li>
-    </a>
-    
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=$$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$&body=Hi,I found this interesting article and thought you might like it https://aaronyang2333.github.io/blog/blog/2021/02/15/AIA-ch4-Q-A/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
 </div>
 
+<!-- css & js -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
-        <hr>
-    
+        <!-- Sharing End -->
         
-<!-- <h5>VISITORS</h5> -->
-<h5><a href="/blog/">VISITORS</a></h5>
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
         <hr>
-    
-</div>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+<!-- gitalk start -->
+<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+<div id="gitalk-container"></div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+<script src="/js/comment/gitalk.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '56adb2063b0402bb9bc8',
+    clientSecret: 'db54e085182780138cff7e15bd9415c335111e6a',
+    repo: 'aaronyang2333.github.io/blog',
+    owner: 'AaronYang2333',
+    admin: 'AaronYang2333',
+    id: 'Mon Feb 15 2021 22:01:43 GMT-0800', // Ensure uniqueness and length less than 50
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 10 ,
+    pagerDirection: 'last',
+    createIssueManually: false ,
+    language: 'en'
+  });
+  gitalk.render('gitalk-container');
+
+  var gtFolded = () => {
+    setTimeout(function() {
+      let markdownBody = document.getElementsByClassName("markdown-body");
+      let list = Array.from(markdownBody);
+      list.forEach(item => {
+        if (item.clientHeight > 250) {
+          item.classList.add('gt-comment-body-folded');
+          item.style.maxHeight = '250px';
+          item.title = 'Click to Expand';
+          item.onclick = function() {
+            item.classList.remove('gt-comment-body-folded');
+            item.style.maxHeight = '';
+            item.title = '';
+            item.onclick = null;
+          };
+        }
+      })
+    }, 800);
+  }
+</script>
+
+<!-- gitalk end -->
+
+
+
+<!-- 2. gitment comment -->
+
+<!-- gitment start -->
+<!-- Docs:https://github.com/imsun/gitment -->
+
+<div id="blog_comments"></div>
+<!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+
+<script>
+  const myTheme = {
+    render(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'gitment-container gitment-root-container'
+
+      // your custom component
+      container.appendChild(instance.renderSomething(state, instance))
+      container.appendChild(instance.renderHeader(state, instance))
+      container.appendChild(instance.renderEditor(state, instance))
+      container.appendChild(instance.renderComments(state, instance))
+      container.appendChild(instance.renderFooter(state, instance))
+      return container
+    },
+    renderSomething(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'hello_visitor'
+      if (state.user.login) {
+        container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+      }
+      return container
+    }
+  }
+
+  const gitment = new Gitment({
+    id: 'Mon Feb 15 2021 22:01:43 GMT-0800', // optional
+    owner: 'AaronYang2333',
+    repo: 'blog',
+    oauth: {
+      client_id: 'bb6dc79a147b7896b8e1',
+      client_secret: 'f1f1d3bc26f29569677365cc3de98ae0b17d7b1d'
+    },
+    desc: '不想说点儿啥么？(leave some comments!)',
+    perPage: '10',
+    maxCommentHeight: '250',
+    theme: myTheme,
+    // ... For more available options, check out the documentation below
+  })
+
+  gitment.render('blog_comments')
+  // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
+</script>
+
+<!-- gitment end -->
+
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Minimum-Spanning-Trees"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Minimum Spanning Trees</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Kruskal’s-Algorithm"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Kruskal’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Prim’s-Algorithm"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Prim’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Dijkstra’s-Algorithm"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Dijkstra’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Huffman-Tree"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Huffman Tree</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/blog/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
+            
+            <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
+            
+            <a class="tag" href="/blog/tags/#Greedy Algorithm" title="Greedy Algorithm">Greedy Algorithm</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 	<!-- Footer (contains ThemeColor、viewer) -->
