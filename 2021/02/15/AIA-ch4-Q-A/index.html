@@ -322,11 +322,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              需要花 <span class="post-count">11</span> 分钟读完
+              需要花 <span class="post-count">12</span> 分钟读完
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              总共 <span class="post-count">1.8k</span> 个字儿
+              总共 <span class="post-count">1.9k</span> 个字儿
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -386,7 +386,13 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="Minimum-Spanning-Trees"><a href="#Minimum-Spanning-Trees" class="headerlink" title="Minimum Spanning Trees"></a>Minimum Spanning Trees</h3><h4 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h4><blockquote>
+        <h3 id="Gneral-Solution"><a href="#Gneral-Solution" class="headerlink" title="Gneral Solution"></a>Gneral Solution</h3><h4 id="Shortest-Path"><a href="#Shortest-Path" class="headerlink" title="Shortest Path**"></a>Shortest Path**</h4><blockquote>
+<p>Dijkstra <strong>(cannot has negative weight)</strong><br>BFS <strong>(require a graph doesn’t consider weight)</strong><br>Topological Sort <strong>(require directed graph)</strong></p>
+</blockquote>
+<h4 id="Minimum-Cost"><a href="#Minimum-Cost" class="headerlink" title="Minimum Cost"></a>Minimum Cost</h4><blockquote>
+<p>MST</p>
+</blockquote>
+<h3 id="Minimum-Spanning-Trees"><a href="#Minimum-Spanning-Trees" class="headerlink" title="Minimum Spanning Trees"></a>Minimum Spanning Trees</h3><h4 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h4><blockquote>
 <p><img src="Kruskal.png"  style="display:inline;box-shadow: none !important;"></p>
 </blockquote>
 <h4 id="Prim’s-Algorithm"><a href="#Prim’s-Algorithm" class="headerlink" title="Prim’s Algorithm"></a>Prim’s Algorithm</h4><blockquote>
@@ -395,8 +401,11 @@
 <p><img src="Prim.png"  style="display:inline;box-shadow: none !important;"></p>
 </blockquote>
 </blockquote>
+<h4 id="Feature"><a href="#Feature" class="headerlink" title="Feature"></a>Feature</h4><blockquote>
+<p>The smallest crossing edge must be in the MST.</p>
+</blockquote>
 <h4 id="Dijkstra’s-Algorithm"><a href="#Dijkstra’s-Algorithm" class="headerlink" title="Dijkstra’s Algorithm"></a>Dijkstra’s Algorithm</h4><blockquote>
-<p>sada</p>
+<p>does not work on graphs with negative weights.<br><img src="dij1.png"  style="display:inline;box-shadow: none !important;"></p>
 </blockquote>
 <h4 id="Huffman-Tree"><a href="#Huffman-Tree" class="headerlink" title="Huffman Tree"></a>Huffman Tree</h4><h3 id="Review-Q-amp-A"><a href="#Review-Q-amp-A" class="headerlink" title="Review Q&amp;A"></a>Review Q&amp;A</h3><ol>
 <li><p><strong>(T/F)</strong> In the interval scheduling problem, if all intervals are of equal size, a greedy algorithm based on earliest start time will always select the maximum number of compatible intervals.</p>
@@ -411,7 +420,7 @@
 <blockquote>
 <ul>
 <li><strong>False</strong></li>
-<li>maybe differnt order.</li>
+<li>maybe differnt order.<br><img src="r2.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
@@ -434,8 +443,8 @@
 <li><p><strong>(T/F)</strong> If a connected undirected graph <script type="math/tex">G = (V, E)</script> has $n = |V|$ vertices and $n + 5$ edges, we can find the minimum spanning tree of <script type="math/tex">G</script> in $O(n)$ runtime.</p>
 <blockquote>
 <ul>
-<li><strong>False</strong></li>
-<li>neither Kruskal nor Prim can do that.</li>
+<li><strong>True</strong></li>
+<li>first, this graph has a circle at least.<br>the original time complexity of prim algorithm is $O((V + E) \cdot log(V))$. but this complexity is for complete graph.<br><br>about this issue, the heap size = 6, so we can say the $log(V)$ is a constant. So we can find the MST in a linear time.<br><img src="r5.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
@@ -474,8 +483,7 @@
 <li><p><strong>(T/F)</strong> If all edges in a connected undirected graph have distinct positive weights, the shortest path between any two vertices is unique.</p>
 <blockquote>
 <ul>
-<li><strong>False</strong></li>
-<li>maybe there are some edges have same weight.</li>
+<li><strong>False</strong><br><img src="r10.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
@@ -483,15 +491,17 @@
 <blockquote>
 <ul>
 <li><strong>True</strong></li>
-<li>dont know</li>
+<li>$x + y + z &lt; a + b$</li>
+<li>$2 \cdot (x + y + z) &lt;2 \cdot (a + b)$ for sure.</li>
 </ul>
 </blockquote>
 </li>
 <li><p><strong>(T/F)</strong> Suppose we have calculated the shortest paths from a source to all other vertices. If we modify the original graph, <script type="math/tex">G</script>, such that weights of all edges are increased by 2, then the shortest path tree of <script type="math/tex">G</script> is also the shortest path tree of the modified graph.</p>
 <blockquote>
 <ul>
-<li><strong>True</strong></li>
-<li>dont know</li>
+<li><strong>False</strong></li>
+<li>could be different.</li>
+<li>counter example.<br><img src="r12.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
@@ -554,8 +564,7 @@
 </li>
 <li>Given a graph, $G = (V, E)$, whose edge weights are integers in the range $[0, W]$, where $W$ is a relatively small integer number, we could run Dijkstra’s algorithm to find the shortest distances from the start vertex to all other vertices. Design a new algorithm that will run in linear time $O(V + E)$ and therefore outperform Dijkstra’s algorithm.<blockquote>
 <ul>
-<li><strong>Solution</strong></li>
-<li><strong>O(n)</strong></li>
+<li><strong>Solution</strong><br><img src="e7.png"  style="display:inline;box-shadow: none !important;"></li>
 </ul>
 </blockquote>
 </li>
@@ -800,7 +809,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Minimum-Spanning-Trees"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Minimum Spanning Trees</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Kruskal’s-Algorithm"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Kruskal’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Prim’s-Algorithm"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Prim’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Dijkstra’s-Algorithm"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Dijkstra’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Huffman-Tree"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Huffman Tree</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gneral-Solution"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Gneral Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Shortest-Path"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Shortest Path**</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Minimum-Cost"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Minimum Cost</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Minimum-Spanning-Trees"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Minimum Spanning Trees</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Kruskal’s-Algorithm"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Kruskal’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Prim’s-Algorithm"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Prim’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Feature"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Feature</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Dijkstra’s-Algorithm"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Dijkstra’s Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Huffman-Tree"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Huffman Tree</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
         
         </div>
       </aside>
@@ -1389,6 +1398,21 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>

@@ -367,21 +367,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/blog/2021/01/24/AIA-ch2-Q-A/">
-            <h2 class="post-title">
-              $$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
           <a href="/blog/2021/01/21/AIA-ch1-Q-A/">
             <h2 class="post-title">
               $$[Algorithms \, In \, Action]-CH1\,Review$$
@@ -397,9 +382,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/blog/2021/02/06/AIA-ch3-Q-A/">
+          <a href="/blog/2021/01/24/AIA-ch2-Q-A/">
             <h2 class="post-title">
-              $$[Algorithms \, In \, Action]-CH3\, Heap$$
+              $$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$
             </h2>
             
           </a>
@@ -415,6 +400,21 @@
           <a href="/blog/2021/02/15/AIA-ch4-Q-A/">
             <h2 class="post-title">
               $$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/blog/2021/02/06/AIA-ch3-Q-A/">
+            <h2 class="post-title">
+              $$[Algorithms \, In \, Action]-CH3\, Heap$$
             </h2>
             
           </a>
@@ -924,6 +924,21 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
