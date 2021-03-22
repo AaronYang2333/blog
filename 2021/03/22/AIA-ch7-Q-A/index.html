@@ -71,12 +71,12 @@
 
   <!-- Pygments Highlight CSS -->
   
-<link rel="stylesheet" href="../../css/highlight.css">
-<link rel="stylesheet" href="../../css/widget.css">
-<link rel="stylesheet" href="../../css/rocket.css">
-<link rel="stylesheet" href="../../css/signature.css">
-<link rel="stylesheet" href="../../css/catalog.css">
-<link rel="stylesheet" href="../../css/livemylife.css">
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/widget.css">
+<link rel="stylesheet" href="../../../../css/rocket.css">
+<link rel="stylesheet" href="../../../../css/signature.css">
+<link rel="stylesheet" href="../../../../css/catalog.css">
+<link rel="stylesheet" href="../../../../css/livemylife.css">
 
 
   
@@ -142,10 +142,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/categories/CSCI-570/">
+  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/2021/03/22/AIA-ch7-Q-A/">
   <title>
     
-    Current Tab
+    $$[Algorithms \, In \, Action]-CH7\, Network  \,\, Flow $$ - Current Tab
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -281,8 +281,8 @@
 
   <style type="text/css">
     header.intro-header {
-       /*page*/
-        background-image: url('/blog/');
+       /*post*/
+        background-image: url('cruves.png');
       
     }
 
@@ -300,10 +300,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1></h1>
-            <!--<hr class="small">-->
-            <span class="subheading"></span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
+              
+              <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
+              
+              <a class="tag" href="/blog/tags/#Network Flow" title="Network Flow">Network Flow</a>
+              
+            </div>
+            <h1>$$[Algorithms \, In \, Action]-CH7\, Network  \,\, Flow $$</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Aaron Yang on
+              2021-03-22
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              需要花 <span class="post-count">8</span> 分钟读完
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              总共 <span class="post-count">1.3k</span> 个字儿
+            </span>
+            <div class="blank_box"></div>
+            <!-- 不蒜子统计 start -->
+            <span class="meta">
+              已经有 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 个人读过了
+            </span>
+            <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
+            
+
+
           </div>
           
         </div>
@@ -344,285 +378,541 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-	<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+	<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <h3 id="Review-Q-amp-A"><a href="#Review-Q-amp-A" class="headerlink" title="Review Q&amp;A"></a>Review Q&amp;A</h3><ol>
+<li><p>What is a flow?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>What is a flow network?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>What is an augmenting path?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>What is the relationship between a flow value and a cut capacity?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Among all cuts, how do you distinguish a min-cut in the residual network?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>How do you find a min-cut?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Is a min-cut unique?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>How do you force the flow to use certain edges?</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> A residual network is a flow network.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> The Ford–Fulkerson algorithm always terminates.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> The Ford–Fulkerson algorithm is a polynomial time algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> The Ford–Fulkerson algorithm is a greedy algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> The Edmonds-Karp 1 algorithm is a pseudo-polynomial time algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> The Edmonds-Karp 2 algorithm is a polynomial time algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> If all capacities in a flow network are integers, then every maximum flow in the network is such that the flow value on each edge is an integer.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> If we add the same positive number to the capacity of every directed edge, then the minimum cut (but not its value) remains unchanged.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Given a max-flow value you can find a min-cut in $O(E)$.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Given a min-cut value you can find a max-flow value in $O(E)$.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> Every flow is a circulation.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>(T/F)</strong> There is a feasible circulation with demands $\{d_v\}$ if $\sum_{v}d_v$ = 0.</p>
+<blockquote>
+<ul>
+<li><strong>False</strong></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h3 id="Exercise-Q-amp-A"><a href="#Exercise-Q-amp-A" class="headerlink" title="Exercise Q&amp;A"></a>Exercise Q&amp;A</h3><ol>
+<li><p>Given a flow network $N = (G = (V, E), s, t, c)$, where E might contain edges $(u, v)$ and $(v, u)$ in both directions for some pair of vertices $u$, $v$, we would like to use the Ford–Fulkerson algorithm to solve the flow problem on $G$, but $G$ is not a flow network. Reduce this problem to the network flow problem.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Suppose we have a directed weighted graph $G = (V, E)$ with multiple sources $s_1, s_2, …, s_n$ and multiple sinks $t_1, t_2, …, t_m$. Reduce this problem to the network flow problem.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Given a flow network $N = (G = (V, E), s, t, c)$, find the maximum number of edge disjoint paths from $s$ to $t$. A set of paths is edge disjoint if no two paths share an edge.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Given a flow network $N = (G = (V, E), s, t, c)$, find the maximum number of vertex ndisjoint paths from $s$ to $t$. A set of paths is vertex disjoint if no two paths share na vertex.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Given a flow network $N = (G = (V, E), s, t, c)$, in which, in addition to having a capacity c$(u, v)$ for every edge, we also have a capacity $c(v)$ for every vertex. The flow coming to a vertex $v$ cannot exceed the vertex capacity $c(v)$. Reduce this problem to the network flow problem.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>You have successfully computed a maximum $s-t$ flow for a network $G = (V, E)$ with positive integer edge capacities. Your manager now gives you another network $G’$ that is identical to $G$ except that the capacity of exactly one edge is decreased by one. You are also explicitly given the edge whose capacity was changed. Describe how you can compute a maximum flow for $G’$ in linear time.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>The vertex cover of an undirected graph $G = (V, E)$ is a subset of the vertices that touches every edge; that is, a subset $S \in V$ such that for each edge $(u, v) \in E$, one or both of $u, v$ are in $S$. Show that the problem of finding the minimum vertex cover in a bipartite graph reduces to the maximum flow problem.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>A subset of edges is a matching if no two edges have a common vertex. A maximum matching is a matching with the largest possible number of edges. Our goal is to find the maximum matching in a bipartite graph. Show that the problem of finding the maximum matching in a bipartite graph reduces to the maximum flow problem.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>There are $n$ students in a class. We want to choose a subset of $k$ students to join a committee. There has to be $m_1$ number of freshmen, $m_2$ number of sophomores, $m_3$ number of juniors, and $m_4$ number of seniors on the committee. Each student is from one of $k$ departments, where $k = m_1 + m_2 + m_3 + m_4$. Exactly one student from each department has to be chosen for the committee. We are given a list of students, their home departments, and their class (freshman, sophomore, junior, or senior). Describe an efficient algorithm based on network flow techniques to select who should be on the committee such that these constraints are all satisfied.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Consider a set of mobile computing clients in a certain town who each need to be connected to one of several possible base stations. We’ll suppose there are $n$ clients, with the position of each client specified by its $(x, y)$ coordinates in the plane. There are also k base stations; the position of each of these is specified by $(x, y)$ coordinates as well. For each client, we wish to connect it to exactly one of the base stations. Our choice of connections is constrained in the following ways. There is a range parameter $R$, which means that a client can only be connected to a base station that is within distance R. There is also a load parameter L, which means that no more than L clients can be connected to any single base station. Given the positions of a set of clients and a set of base stations, as well as the range and load parameters, decide whether every client can be connected simultaneously to a base station.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>The computer science department course structure is represented as a directed acyclic graph $G = (V, E)$ where the vertices correspond to courses and a directed edge $(u, v)$ exists if and only if course $u$ is a prerequisite for course $v$. By taking a course $w \in V$, you gain a benefit of $p_w$ which could be a positive or negative number. Note, to take a course, you have to take all of its prerequisites. Design an efficient algorithm that picks a subset $S \in V$ of courses such that the total benefit is maximized.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>The edge connectivity of an undirected graph $G = (V, E)$ is the minimum number of edges that must be removed to disconnect the graph. For example, the edge connectivity of a tree is $1$. Show how the edge connectivity of an undirected graph can be determined by running a maximum-flow algorithm.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>There is a precious diamond that is on display in a museum at $m$ disjoint time intervals. There are $n$ security guards who can be deployed to protect the precious diamond. Each guard has a list of intervals for which he or she is available to be deployed. Each guard can be deployed to at most $M$ time slots and has to be deployed to at least $L$ time slots. Design an algorithm that decides if there is a deployment of guards to intervals such that each interval has either one or two guards deployed.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Your local police department has asked you to help set up the work shift schedule for the next month. There are $n$ policemen on the staff and $m$ days in the month. Each policeman gives a list of the days of the month that he or she is available to work. Let $d_i$ denote the number of days that each policeman $i$ is available to work. Then he or she should be scheduled to work at least $d_i / 2$ of these days. Each day there must be exactly 2 policemen on duty. Design an algorithm that decides whether there exists a schedule that satisfies all of these requirements.</p>
+<blockquote>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+</blockquote>
+</li>
+</ol>
 
-      
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
 
-      
-
-      <!-- 归档列表 -->
-
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
-          <span class="tag-text">2021</span>
-        </span>
-        <ul>
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            03-22
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/03/22/AIA-ch7-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH7\, Network  \,\, Flow $$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
           
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            03-20
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/03/20/AIA-ch6-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH6\, Dynamic \,\, Programming $$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
-          
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            03-03
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/03/03/AIA-ch5-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH5\, Divide-and-Conquer $$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
-          
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            02-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/02/15/AIA-ch4-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
-          
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            02-06
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/02/06/AIA-ch3-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH3\, Heap$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
-          
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            01-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/01/24/AIA-ch2-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
-          
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            01-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/blog/2021/01/21/AIA-ch1-Q-A/" style="color: #0085a1">
-              <span>
-                $$[Algorithms \, In \, Action]-CH1\,Review$$
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          <li class="next">
+            <a href="/blog/2021/03/20/AIA-ch6-Q-A/" data-toggle="tooltip" data-placement="top" title="$$[Algorithms \, In \, Action]-CH6\, Dynamic \,\, Programming $$">Next &rarr;</a>
           </li>
           
         </ul>
-      </div>
-      
 
+        
+        <!-- tip start -->
+        <div class="tip">
+          <p>
+            不建议Ctrl+CV转载，多看看得了。(Not recommend you to reprint this article, come over to my site more frequently is enough.)
+          </p>
+        </div>
+        <!-- tip end -->
+        
 
-    </div>
-  </div>
-</div>
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/blog/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/blog/img/avatar/mona_lisa.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>What&#39;s Up Man!  吃了没yaa!</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/AaronYang2333">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="http://weibo.com/杨博Aaron">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-        <li>
-          <a target="_blank" href="https://www.douban.com/people/byang971">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-      
-
-      
-        <li>
-          <a target="_blank" href="https://leetcode-cn.com/u/aaronyang2333">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-      
-
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- Categories -->
-
-<!-- <h5>categories</h5> -->
-<h5><a href="/blog/categories/">CATEGORIES</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/blog/categories/#CSCI 570">
-      <li>CSCI 570</li>
-    </a>
-    
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=$$[Algorithms \, In \, Action]-CH7\, Network  \,\, Flow $$&body=Hi,I found this interesting article and thought you might like it https://aaronyang2333.github.io/blog/blog/2021/03/22/AIA-ch7-Q-A/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
 </div>
 
+<!-- css & js -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
-        <hr>
-    
+        <!-- Sharing End -->
         
-<!-- <h5>VISITORS</h5> -->
-<h5><a href="/blog/">VISITORS</a></h5>
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
         <hr>
-    
-</div>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+<!-- gitalk start -->
+<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+<div id="gitalk-container"></div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+<script src="/js/comment/gitalk.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '56adb2063b0402bb9bc8',
+    clientSecret: 'db54e085182780138cff7e15bd9415c335111e6a',
+    repo: 'aaronyang2333.github.io/blog',
+    owner: 'AaronYang2333',
+    admin: 'AaronYang2333',
+    id: 'Mon Mar 22 2021 17:15:56 GMT-0700', // Ensure uniqueness and length less than 50
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 10 ,
+    pagerDirection: 'last',
+    createIssueManually: false ,
+    language: 'en'
+  });
+  gitalk.render('gitalk-container');
+
+  var gtFolded = () => {
+    setTimeout(function() {
+      let markdownBody = document.getElementsByClassName("markdown-body");
+      let list = Array.from(markdownBody);
+      list.forEach(item => {
+        if (item.clientHeight > 250) {
+          item.classList.add('gt-comment-body-folded');
+          item.style.maxHeight = '250px';
+          item.title = 'Click to Expand';
+          item.onclick = function() {
+            item.classList.remove('gt-comment-body-folded');
+            item.style.maxHeight = '';
+            item.title = '';
+            item.onclick = null;
+          };
+        }
+      })
+    }, 800);
+  }
+</script>
+
+<!-- gitalk end -->
+
+
+
+<!-- 2. gitment comment -->
+
+<!-- gitment start -->
+<!-- Docs:https://github.com/imsun/gitment -->
+
+<div id="blog_comments"></div>
+<!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+
+<script>
+  const myTheme = {
+    render(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'gitment-container gitment-root-container'
+
+      // your custom component
+      container.appendChild(instance.renderSomething(state, instance))
+      container.appendChild(instance.renderHeader(state, instance))
+      container.appendChild(instance.renderEditor(state, instance))
+      container.appendChild(instance.renderComments(state, instance))
+      container.appendChild(instance.renderFooter(state, instance))
+      return container
+    },
+    renderSomething(state, instance) {
+      const container = document.createElement('div')
+      container.lang = "en-US"
+      container.className = 'hello_visitor'
+      if (state.user.login) {
+        container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+      }
+      return container
+    }
+  }
+
+  const gitment = new Gitment({
+    id: 'Mon Mar 22 2021 17:15:56 GMT-0700', // optional
+    owner: 'AaronYang2333',
+    repo: 'blog',
+    oauth: {
+      client_id: 'bb6dc79a147b7896b8e1',
+      client_secret: 'f1f1d3bc26f29569677365cc3de98ae0b17d7b1d'
+    },
+    desc: '不想说点儿啥么？(leave some comments!)',
+    perPage: '10',
+    maxCommentHeight: '250',
+    theme: myTheme,
+    // ... For more available options, check out the documentation below
+  })
+
+  gitment.render('blog_comments')
+  // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
+</script>
+
+<!-- gitment end -->
+
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/blog/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
+            
+            <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
+            
+            <a class="tag" href="/blog/tags/#Network Flow" title="Network Flow">Network Flow</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 	<!-- Footer (contains ThemeColor、viewer) -->

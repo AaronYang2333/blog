@@ -326,7 +326,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              总共 <span class="post-count">764</span> 个字儿
+              总共 <span class="post-count">796</span> 个字儿
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -392,6 +392,7 @@
 <li><strong>O</strong> big O, <script type="math/tex">\exists \, c</script> which <em>c</em> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">f(n)     \leqslant c \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
 <li><strong>Ω</strong> big Omega, <script type="math/tex">\exists \, c</script> which <em>c</em> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">f(n)     \geqslant c \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
 <li><strong>Θ</strong> big Theta, <script type="math/tex">\exists \, {c_1} \, and \, {c_2}</script> which <script type="math/tex">{c_1}</script> &gt; 0 and <script type="math/tex">{c_2}</script> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">{c_1} \cdot g(n) \leqslant f(n)    \leqslant {c_2} \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
+<li><strong>Simple Graph</strong> is an unweighted, undirected graph containing no graph cycle or multiple edges between two vertices.<br><img src="simple_graph.png" alt="as"></li>
 </ul>
 <p><img src="fn_gn.png" alt="as"></p>
 <h3 id="Theorems"><a href="#Theorems" class="headerlink" title="Theorems"></a>Theorems</h3><ul>
@@ -408,9 +409,9 @@
 <li><em>In an undirected simple graph G = (V, E), there are at most <script type="math/tex">\frac{V \cdot (V - 1)}{2}</script> edges. In short, by using the asymptotic notation, <script type="math/tex">E = O(V^2)</script>.</em></li>
 <li><em>three way to traversal a graph:</em><blockquote>
 <ol>
-<li>depth-first-search</li>
-<li>breadth-first-search</li>
-<li>topological sort<ul>
+<li>depth-first-search $Runtime Complexity: O(V + E)$</li>
+<li>breadth-first-search $Runtime Complexity: O(V + E)$</li>
+<li>topological sort $Runtime Complexity: O(V + E)$<ul>
 <li>the result of topological sort is not unique</li>
 </ul>
 </li>
@@ -572,7 +573,7 @@
 <script type="math/tex; mode=display">log(n^n),\, n^2,\, n^{log(n)},\, nlog(log(n)),\, 2^{log(n)},\, (log(n))^2,\, n^{\sqrt{2}}</script><p>in increasing order of growth rate, with g(n) following f(n) in your list if and only if f(n) = O(g(n)).</p>
 <blockquote>
 <ul>
-<li><strong>Solution</strong> we can follow this order<br>$O(1) &lt;= O(log(n)) &lt;= O((log(n))^C) &lt;= O(C^{log(n)}) &lt;= O(n) &lt;= O(n \cdot log(n)) &lt;= O(n^C) &lt;= O((log(n))!) &lt;= O(n^{log(n)}) &lt;= O(C^n)$<br>And we can simply some of them in first place.<br><script type="math/tex">① \, log(n^n) = n \cdot log(n) \, ⑤ \, 2^{log_2 n} = log_2 2^n = n \cdot 1 = n</script>,<br>So , finally, we have <br><br>$nlog(n),\, n^2,\, n^{log(n)},\, nlog(log(n)),\, n,\, (log(n))^2,\, n^{\sqrt{2}}$ <br><br>$O(1) \Rightarrow None$<br>$O(log(n)) \Rightarrow None$<br>$O((log(n))^C) \Rightarrow ⑥$<br>$O(C^{log(n)}) \Rightarrow None$<br>$O(n) \Rightarrow ⑤$<br>$O(n \cdot log(n)) \Rightarrow ①④ since \, n &gt; log(n) \Rightarrow ④①$<br>$O(n^C) \Rightarrow ②⑦ since \, \sqrt(2) &lt; 2 \, and \, log(n)\, grow \,slower \,than \,exponential \,func $<br>$\quad especially \,when \,a &gt; 1 \, so, ⑦②$<br>$O((log(n))!) \Rightarrow None$<br>$O(n^{log(n)}) \Rightarrow ③$<br>$O(C^n) \Rightarrow None$<br><br>the answers is: ⑥&lt;⑤&lt;④&lt;①&lt;⑦&lt;②&lt;③<br>$(log(n))^2,\, 2^{log(n)},\, nlog(log(n)),\, log(n^n),\, n^{\sqrt{2}}, \, n^2,\, n^{log(n)}$</li>
+<li><strong>Solution</strong> we can follow this order<br>$O(1) &lt;= O(log(n)) &lt;= O((log(n))^C) &lt;= O(C^{log(n)}) &lt;= O(n) &lt;= O(n \cdot log(n)) &lt;= O(n^C) &lt;= O((log(n))!) &lt;= O(log(n)^{log(n)}) &lt;= O(n^{log(n)}) &lt;= O(C^n)$<br>And we can simply some of them in first place.<br><script type="math/tex">① \, log(n^n) = n \cdot log(n) \, ⑤ \, 2^{log_2 n} = log_2 2^n = n \cdot 1 = n</script>,<br>So , finally, we have <br><br>$nlog(n),\, n^2,\, n^{log(n)},\, nlog(log(n)),\, n,\, (log(n))^2,\, n^{\sqrt{2}}$ <br><br>$O(1) \Rightarrow None$<br>$O(log(n)) \Rightarrow None$<br>$O((log(n))^C) \Rightarrow ⑥$<br>$O(C^{log(n)}) \Rightarrow None$<br>$O(n) \Rightarrow ⑤$<br>$O(n \cdot log(n)) \Rightarrow ①④ since \, n &gt; log(n) \Rightarrow ④①$<br>$O(n^C) \Rightarrow ②⑦ since \, \sqrt(2) &lt; 2 \, and \, log(n)\, grow \,slower \,than \,exponential \,func $<br>$\quad especially \,when \,a &gt; 1 \, so, ⑦②$<br>$O((log(n))!) \Rightarrow None$<br>$O(n^{log(n)}) \Rightarrow ③$<br>$O(C^n) \Rightarrow None$<br><br>the answers is: ⑥&lt;⑤&lt;④&lt;①&lt;⑦&lt;②&lt;③<br>$(log(n))^2,\, 2^{log(n)},\, nlog(log(n)),\, log(n^n),\, n^{\sqrt{2}}, \, n^2,\, n^{log(n)}$</li>
 </ul>
 </blockquote>
 </li>
