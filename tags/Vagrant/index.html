@@ -71,12 +71,12 @@
 
   <!-- Pygments Highlight CSS -->
   
-<link rel="stylesheet" href="../../../../css/highlight.css">
-<link rel="stylesheet" href="../../../../css/widget.css">
-<link rel="stylesheet" href="../../../../css/rocket.css">
-<link rel="stylesheet" href="../../../../css/signature.css">
-<link rel="stylesheet" href="../../../../css/catalog.css">
-<link rel="stylesheet" href="../../../../css/livemylife.css">
+<link rel="stylesheet" href="../../css/highlight.css">
+<link rel="stylesheet" href="../../css/widget.css">
+<link rel="stylesheet" href="../../css/rocket.css">
+<link rel="stylesheet" href="../../css/signature.css">
+<link rel="stylesheet" href="../../css/catalog.css">
+<link rel="stylesheet" href="../../css/livemylife.css">
 
 
   
@@ -142,10 +142,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/2021/01/24/AIA-ch2-Q-A/">
+  <link rel="canonical" href="https://aaronyang2333.github.io/blog/blog/tags/Vagrant/">
   <title>
     
-    $$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$ - Current Tab
+    Current Tab
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -281,8 +281,8 @@
 
   <style type="text/css">
     header.intro-header {
-       /*post*/
-        background-image: url('cruves.png');
+       /*page*/
+        background-image: url('/blog/');
       
     }
 
@@ -300,44 +300,10 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="post-heading">
-            <div class="tags">
-              
-              <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
-              
-              <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
-              
-              <a class="tag" href="/blog/tags/#Amortized Analysis" title="Amortized Analysis">Amortized Analysis</a>
-              
-            </div>
-            <h1>$$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$</h1>
-            <h2 class="subheading"></h2>
-            <span class="meta">
-              Posted by Aaron Yang on
-              2021-01-24
-            </span>
-
-
-            
-            <!-- WordCount start -->
-            <div class="blank_box"></div>
-            <span class="meta">
-              需要花 <span class="post-count">7</span> 分钟读完
-            </span>
-            <div class="blank_box"></div>
-            <span class="meta">
-              总共 <span class="post-count">1.2k</span> 个字儿
-            </span>
-            <div class="blank_box"></div>
-            <!-- 不蒜子统计 start -->
-            <span class="meta">
-              已经有 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 个人读过了
-            </span>
-            <!-- 不蒜子统计 end -->
-            <!-- WordCount end -->
-            
-
-
+          <div class="site-heading">
+            <h1></h1>
+            <!--<hr class="small">-->
+            <span class="subheading"></span>
           </div>
           
         </div>
@@ -378,462 +344,304 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-	<!-- Modify by Yu-Hsuan Yen -->
-<!-- Post Content -->
-<article>
-  <div class="container">
-    <div class="row">
-      <!-- Post Container -->
-      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+	<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    
 
-        <h3 id="Amortized-Analysis"><a href="#Amortized-Analysis" class="headerlink" title="Amortized Analysis"></a>Amortized Analysis</h3><p>In a sequence of operations, the worst-case time does not occur often in each oper ation; some operations may be cheap, some may be expensive. Therefore, a traditional worst-case per operation analysis <strong>Big O</strong> can give an overly pessimistic bound. </p>
-<blockquote>
-<p>That why we need Amortized analysis.</p>
-</blockquote>
-<p>There are generally three methods for performing amortized analysis:</p>
-<ol>
-<li>The aggregate method computes the upper bound <strong>T(n)</strong> on the total cost of <strong>n</strong> operations. The amortized cost is given by <strong>T(n)/n</strong>. In this method each operation will get the same amortized cost, even if there are several types of operations in the sequence.</li>
-<li>The accounting method (or the banker’s method) computes the individual cost of each operation. We assign different charges to each operation; some operations may charge more or less than they actually cost. The amount we charge an operation is called its amortized cost.</li>
-<li>The potential method (or the physicist’s method). We won’t use a potential method in this course</li>
-</ol>
-<h4 id="Unbounded-Array"><a href="#Unbounded-Array" class="headerlink" title="Unbounded Array"></a>Unbounded Array</h4><h4 id="Binary-Counter"><a href="#Binary-Counter" class="headerlink" title="Binary Counter"></a>Binary Counter</h4><h3 id="Topological-Sort"><a href="#Topological-Sort" class="headerlink" title="Topological Sort"></a>Topological Sort</h3><ul>
-<li><strong>T(n)</strong> counts the # of steps, where <em>n</em> is the input size.</li>
-<li><strong>O</strong> big O, <script type="math/tex">\exists \, c</script> which <em>c</em> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">f(n)     \leqslant c \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
-<li><strong>Ω</strong> big Omega, <script type="math/tex">\exists \, c</script> which <em>c</em> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">f(n)     \geqslant c \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
-<li><strong>Θ</strong> big Theta, <script type="math/tex">\exists \, {c_1} \, and \, {c_2}</script> which <script type="math/tex">{c_1}</script> &gt; 0 and <script type="math/tex">{c_2}</script> &gt; 0 and real number <script type="math/tex">{n_0}</script>, has <script type="math/tex">{c_1} \cdot g(n) \leqslant f(n)    \leqslant {c_2} \cdot g(n)</script>, for all  <script type="math/tex">n \geqslant {n_0}</script>.</li>
-</ul>
-<h3 id="Hamiltonian-Path"><a href="#Hamiltonian-Path" class="headerlink" title="Hamiltonian Path"></a>Hamiltonian Path</h3><ul>
-<li>finding the <strong>longest path</strong> in a directed acyclic graph (DAG)</li>
-</ul>
-<h3 id="Strongly-Connected-Graph"><a href="#Strongly-Connected-Graph" class="headerlink" title="Strongly Connected Graph"></a>Strongly Connected Graph</h3><ul>
-<li>how to prove a graph is a strongly connected graph<br><img src="s_c_graph.png"  style="display:inline;box-shadow: none !important;"></li>
-</ul>
-<h3 id="Review-Q-amp-A"><a href="#Review-Q-amp-A" class="headerlink" title="Review Q&amp;A"></a>Review Q&amp;A</h3><ol>
-<li><p>What is the definition of the amortized cost using the aggregate method? <img src="lecture.png"  style="width:30px;display:inline;box-shadow: none !important;"></p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-<li>The aggregate method computes the upper bound <strong>T(n)</strong> on the total cost of <strong>n</strong> operations. The amortized cost is given by <strong>T(n)/n</strong>. In this method each operation will get the same amortized cost, even if there are several types of operations in the sequence.</li>
-</ul>
-</blockquote>
-</li>
-<li><p><strong>(T/F)</strong> Amortized analysis is used to determine the average runtime complexity of an algorithm.</p>
-<blockquote>
-<ul>
-<li><strong>False</strong></li>
-<li>what is “average complexity”? that is ask you to compute the runtime complexity of a single operation when given <strong>n</strong> random input.(focus on this operation and compute all best case, bad case and so on. )</li>
-<li>“Amortized analysis” is another concept, actually this analysis is looking at the worst-case run time per operation, rather than per input, that’s the difference. (focus on a sequene of operation and in worst-case.)</li>
-</ul>
-</blockquote>
-</li>
-<li><p><strong>(T/F)</strong> Compared to the worst-case analysis, amortized analysis provides a more accurate upper bound on the performance of an algorithm.</p>
-<blockquote>
-<ul>
-<li><strong>True</strong></li>
-<li>that’s what the definition says.</li>
-</ul>
-</blockquote>
-</li>
-<li><p><strong>(T/F)</strong> The total amortized cost of a sequence of <strong>n</strong> operations gives a lower bound on the total actual cost of the sequence.</p>
-<blockquote>
-<ul>
-<li><strong>False</strong></li>
-<li>The aggregate method computes the upper bound <strong>T(n)</strong> on the total cost of n operations.</li>
-</ul>
-</blockquote>
-</li>
-<li><p><strong>(T/F)</strong> Amortized constant time for a dynamic array is still guaranteed if we increase the array size by 5%.</p>
-<blockquote>
-<ul>
-<li><strong>True</strong></li>
-<li>In practice, programming languages, like JAVA and Python extend array capacity by multiple 1.6, which means increasing the array size by 60%. And ithey still can remain the constant runtime complexity. So if only increase 5%, it will work as well.</li>
-</ul>
-</blockquote>
-</li>
-<li><p><strong>(T/F)</strong> If an operation takes O(1) expected time, then it takes O(1) amortized time.</p>
-<blockquote>
-<ul>
-<li><strong>False</strong></li>
-<li>“expected time” equals to “avgerage time”. </li>
-</ul>
-</blockquote>
-</li>
-<li><p>Suppose you have a data structure such that a sequence of n operations has an amortized cost of <strong>O(n * log n)</strong>. What could be the highest actual time of a single operation?</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-<li>less than <strong>O(n * log n)</strong></li>
-</ul>
-</blockquote>
-</li>
-<li>What is the worst-case runtime complexity of searching in an amortized dictionary?<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-</ul>
-</blockquote>
-</li>
-</ol>
-<h3 id="Exercise-Q-amp-A"><a href="#Exercise-Q-amp-A" class="headerlink" title="Exercise Q&amp;A"></a>Exercise Q&amp;A</h3><ol>
-<li><p>You have a stack data type, and you need to implement a FIFO queue. The stack has the usual POP and PUSH operations, and the cost of each operation is 1. The FIFO has two operations: ENQUEUE and DEQUEUE. We can implement a FIFO queue using two stacks. What is the amortized cost of ENQUEUE and DEQUEUE operations?</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong><br><img src="dequeue.png"  style="display:inline;box-shadow: none !important;"></li>
-</ul>
-</blockquote>
-</li>
-<li><p>We are incrementing a binary counter, where flipping the i-th bit costs i + 1. Flipping the lowest-order bit costs 0 + 1 = 1, the next bit costs 1 + 1 = 2, the next bit costs 2 + 1 = 3, and so on. What is the amortized cost per operation for a sequence of n increments, starting from zero?</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong><br><img src="binary_counter.png"  style="display:inline;box-shadow: none !important;"></li>
-</ul>
-</blockquote>
-</li>
-<li><p>We have argued in the lecture that if the table size is doubled when it’s full, then the amortized cost per insert is acceptable. Fred Hacker claims that this consumes too much space. He wants to try to increase the size with every insert by just two over the previous size. What is the amortized cost per insertion in Fred’s table?</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-</ul>
-</blockquote>
-</li>
-<li><p>This table supports inserts as well as deletions. The protocol is the following: If an array is full, we double its size on insertion; if an array is 1/4 full, we halve the array size on deletion. Show that the amortized cost of insert and delete is 5.</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-</ul>
-</blockquote>
-</li>
-<li><p>Suppose we perform a sequence of n operations on a data structure in which the i-th operation costs i if i is an exact power of 2 and 1 otherwise. Use aggregate analysis to determine the amortized cost per operation.</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong><br>Assume $n = 2^k$ operations, and these operation can be split into two parts.</li>
-</ul>
-<ol>
-<li>if <em>i</em> is an exact power of 2, $cost(i) = 2^i$, which $i \in k$. <br><blockquote>
-<p>part 1 cost = $\Sigma^{k}_{i=0} 2^i$</p>
-</blockquote>
-</li>
-<li>if not, the remaining operations will cost 1.  <br><blockquote>
-<p>part 2 cost = $n - k - 1$</p>
-</blockquote>
-</li>
-</ol>
-<p>So all cost is:<br><br>$Cost = \Sigma^{k}_{i=0} 2^i + n - k - 1$ <br><br>$\quad \quad = 2^{k + 1} - 1 + n - k - 1$ <br><br>$\quad \quad = 2 \cdot n + n - k - 2$ <br><br>$\quad \quad = 3 \cdot n - k - 2$ <br><br>$\quad \quad = 3 \cdot n - 2 - log_2 n$ <br></p>
-</blockquote>
-</li>
-</ol>
-<p>So cost per operation = $\frac{3 \cdot n - 2 - log_2 n}{n} = O(3)$</p>
-<ol>
-<li><p>Suppose we perform a sequence of n operations on a data structure in which the i-th operation costs i if i is an exact power of 4 and 1 otherwise. Use aggregate analysis to determine the amortized cost per operation.</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-</ul>
-</blockquote>
-</li>
-<li><p>A MultiStack data structure has the usual POP and PUSH operations, and the cost of each operation is one unit. Additionally, it has MULTIPOP(k) operation that removes k recently pushed items. If k is bigger than the stack size, it removes all items. We wish to analyze the running time for a sequence of n PUSH, POP, and MULTIPOP operations, starting with an empty stack. What is the worst-case complexity for a sequence of n operations? What is the amortized cost per operation? Use the accounting method.</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-</ul>
-</blockquote>
-</li>
-<li><p>Consider a singly linked list as a dictionary that we always insert at the beginning of the list. Now assume that you may perform any number of insert operations but will only ever perform at most one lookup operation. What is the amortized cost per operation?</p>
-<blockquote>
-<ul>
-<li><strong>Solution</strong></li>
-</ul>
-</blockquote>
-</li>
-</ol>
+    <!-- USE SIDEBAR -->
+    <!-- Post Container -->
+    <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
 
+      
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
 
-        <hr>
-        <!-- Pager -->
-        <ul class="pager">
+      
+
+      <!-- 归档列表 -->
+
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
+          <span class="tag-text">2021</span>
+        </span>
+        <ul>
           
-          <li class="previous">
-            <a href="/blog/2021/02/06/AIA-ch3-Q-A/" data-toggle="tooltip" data-placement="top" title="$$[Algorithms \, In \, Action]-CH3\, Heap$$">&larr; Previous</a>
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            03-27
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/03/27/use-vagrant-to-create-vm-instance/" style="color: #0085a1">
+              <span>
+                use vagrant to create vm instance
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
           </li>
           
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            03-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/03/22/AIA-ch7-Q-A/" style="color: #0085a1">
+              <span>
+                $$[Algorithms \, In \, Action]-CH7\, Network  \,\, Flow $$
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
           
-          <li class="next">
-            <a href="/blog/2021/01/21/AIA-ch1-Q-A/" data-toggle="tooltip" data-placement="top" title="$$[Algorithms \, In \, Action]-CH1\,Review$$">Next &rarr;</a>
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            03-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/03/20/AIA-ch6-Q-A/" style="color: #0085a1">
+              <span>
+                $$[Algorithms \, In \, Action]-CH6\, Dynamic \,\, Programming $$
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            03-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/03/03/AIA-ch5-Q-A/" style="color: #0085a1">
+              <span>
+                $$[Algorithms \, In \, Action]-CH5\, Divide-and-Conquer $$
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            02-15
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/02/15/AIA-ch4-Q-A/" style="color: #0085a1">
+              <span>
+                $$[Algorithms \, In \, Action]-CH4\, Greedy \,\, Algorithms$$
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            02-06
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/02/06/AIA-ch3-Q-A/" style="color: #0085a1">
+              <span>
+                $$[Algorithms \, In \, Action]-CH3\, Heap$$
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            01-24
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/01/24/AIA-ch2-Q-A/" style="color: #0085a1">
+              <span>
+                $$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            01-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/01/21/AIA-ch1-Q-A/" style="color: #0085a1">
+              <span>
+                $$[Algorithms \, In \, Action]-CH1\,Review$$
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
           </li>
           
         </ul>
+      </div>
+      
 
-        
-        <!-- tip start -->
-        <div class="tip">
-          <p>
-            不建议Ctrl+CV转载，多看看得了。(Not recommend you to reprint this article, come over to my site more frequently is enough.)
-          </p>
-        </div>
-        <!-- tip end -->
-        
 
-        
-        <!-- Sharing Srtart -->
-        <!-- Social Social Share Post -->
-<!-- Docs:https://github.com/overtrue/share.js -->
+    </div>
+  </div>
+</div>
 
-<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
-  <ul class="list-inline text-center social-share-ul">
-    <!-- <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-twitter">
-        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
-      </a>
-    </li> -->
-    <li class="social-share-li">
-      <a class="social-share-icon icon-wechat">
-        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-weibo">
-        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
-    <!-- <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-qq">
-        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
-      </a>
-    </li> -->
-    <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=$$[Algorithms \, In \, Action]-CH2\,Amortized \,\, Analysis$$&body=Hi,I found this interesting article and thought you might like it https://aaronyang2333.github.io/blog/blog/2021/01/24/AIA-ch2-Q-A/">
-        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
-      </a>
-    </li>
+
+      <!-- 如果开启评论功能 -->
+      
+    </div>
+
+    <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+  <h5><a href="/blog/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+
+    
+    <img id="avatar_pic" src="/blog/img/avatar/mona_lisa.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
+    
+
+    
+    <p>What&#39;s Up Man!  吃了没yaa!</p>
+    
+
+    <!-- SNS Link -->
+    <ul class="list-inline">
+      
+
+      
+      <li>
+        <a target="_blank" href="https://github.com/AaronYang2333">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a target="_blank" href="http://weibo.com/杨博Aaron">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+        <li>
+          <a target="_blank" href="https://www.douban.com/people/byang971">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a target="_blank" href="https://leetcode-cn.com/u/aaronyang2333">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+      
+
+
+    </ul>
+  </div>
+</section>
+
+        <hr>
+    
+        <!-- Categories -->
+
+<!-- <h5>categories</h5> -->
+<h5><a href="/blog/categories/">CATEGORIES</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="/blog/categories/#CSCI 570">
+      <li>CSCI 570</li>
+    </a>
+    
+    <a href="/blog/categories/#Vagrant">
+      <li>Vagrant</li>
+    </a>
+    
   </ul>
 </div>
 
-<!-- css & js -->
-<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
-        <!-- Sharing End -->
+        <hr>
+    
         
+<!-- <h5>VISITORS</h5> -->
+<h5><a href="/blog/">VISITORS</a></h5>
+<div class="widget">
+  <span>
+    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+  </span>
+  <br />
+  <span>
+    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
+  </span>
+</div>
+
+
         <hr>
-
-        <!-- comments start -->
-        <!-- 1. gitalk comment -->
-
-<!-- gitalk start -->
-<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
-
-<div id="gitalk-container"></div>
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
-<script src="/js/comment/gitalk.js"></script>
-
-<script>
-  var gitalk = new Gitalk({
-    clientID: '56adb2063b0402bb9bc8',
-    clientSecret: 'db54e085182780138cff7e15bd9415c335111e6a',
-    repo: 'aaronyang2333.github.io/blog',
-    owner: 'AaronYang2333',
-    admin: 'AaronYang2333',
-    id: 'Sun Jan 24 2021 11:09:23 GMT-0800', // Ensure uniqueness and length less than 50
-    distractionFreeMode: false, // Facebook-like distraction free mode
-    perPage: 10 ,
-    pagerDirection: 'last',
-    createIssueManually: false ,
-    language: 'en'
-  });
-  gitalk.render('gitalk-container');
-
-  var gtFolded = () => {
-    setTimeout(function() {
-      let markdownBody = document.getElementsByClassName("markdown-body");
-      let list = Array.from(markdownBody);
-      list.forEach(item => {
-        if (item.clientHeight > 250) {
-          item.classList.add('gt-comment-body-folded');
-          item.style.maxHeight = '250px';
-          item.title = 'Click to Expand';
-          item.onclick = function() {
-            item.classList.remove('gt-comment-body-folded');
-            item.style.maxHeight = '';
-            item.title = '';
-            item.onclick = null;
-          };
-        }
-      })
-    }, 800);
-  }
-</script>
-
-<!-- gitalk end -->
-
-
-
-<!-- 2. gitment comment -->
-
-<!-- gitment start -->
-<!-- Docs:https://github.com/imsun/gitment -->
-
-<div id="blog_comments"></div>
-<!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"> <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
-
-<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
-
-<script>
-  const myTheme = {
-    render(state, instance) {
-      const container = document.createElement('div')
-      container.lang = "en-US"
-      container.className = 'gitment-container gitment-root-container'
-
-      // your custom component
-      container.appendChild(instance.renderSomething(state, instance))
-      container.appendChild(instance.renderHeader(state, instance))
-      container.appendChild(instance.renderEditor(state, instance))
-      container.appendChild(instance.renderComments(state, instance))
-      container.appendChild(instance.renderFooter(state, instance))
-      return container
-    },
-    renderSomething(state, instance) {
-      const container = document.createElement('div')
-      container.lang = "en-US"
-      container.className = 'hello_visitor'
-      if (state.user.login) {
-        container.innerText = `Hello ${state.user.login}, Welcome to comment system`
-      }
-      return container
-    }
-  }
-
-  const gitment = new Gitment({
-    id: 'Sun Jan 24 2021 11:09:23 GMT-0800', // optional
-    owner: 'AaronYang2333',
-    repo: 'blog',
-    oauth: {
-      client_id: 'bb6dc79a147b7896b8e1',
-      client_secret: 'f1f1d3bc26f29569677365cc3de98ae0b17d7b1d'
-    },
-    desc: '不想说点儿啥么？(leave some comments!)',
-    perPage: '10',
-    maxCommentHeight: '250',
-    theme: myTheme,
-    // ... For more available options, check out the documentation below
-  })
-
-  gitment.render('blog_comments')
-  // or gitment.render(document.getElementById('comments')) or document.body.appendChild(gitment.render())
-</script>
-
-<!-- gitment end -->
-
-
-
-<!-- 3. disqus comment -->
-
-
-        <!-- comments end -->
-        <hr>
-
-      </div>
-
-      <!-- Catalog: Tabe of Content -->
-      <!-- Table of Contents -->
+    
+</div>
 
     
-      <aside id="sidebar">
-        <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Amortized-Analysis"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Amortized Analysis</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Unbounded-Array"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Unbounded Array</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Binary-Counter"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Binary Counter</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Topological-Sort"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Topological Sort</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Hamiltonian-Path"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Hamiltonian Path</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Strongly-Connected-Graph"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Strongly Connected Graph</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Review-Q-amp-A"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Review Q&amp;A</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Exercise-Q-amp-A"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Exercise Q&amp;A</span></a></li></ol>
-        
-        </div>
-      </aside>
-    
-
-
-      <!-- Sidebar Container -->
-      <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-        <!-- Featured Tags -->
-        
-        <section>
-          <!-- no hr -->
-          <h5>
-            <a href="/blog/tags/">FEATURED TAGS</a>
-          </h5>
-          <div class="tags">
-            
-            <a class="tag" href="/blog/tags/#Review" title="Review">Review</a>
-            
-            <a class="tag" href="/blog/tags/#Q&amp;A" title="Q&amp;A">Q&amp;A</a>
-            
-            <a class="tag" href="/blog/tags/#Amortized Analysis" title="Amortized Analysis">Amortized Analysis</a>
-            
-          </div>
-        </section>
-        
-
-        <!-- Friends Blog -->
-        
-        <hr>
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-
-          
-        </ul>
-        
-      </div>
-    </div>
   </div>
-</article>
-
-
-
-<!-- anchorjs start -->
-<!-- async load function -->
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script type="text/javascript">
-  // async load function
-  function async (u, c) {
-    var d = document,
-      t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) {
-      o.addEventListener('load', function(e) {
-        c(null, e);
-      }, false);
-    }
-    s.parentNode.insertBefore(o, s);
-  };
-</script>
-<script type="text/javascript">
-  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
-  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
-    anchors.options = {
-      visible: 'hover',
-      placement: 'left',
-      // icon: 'ℬ'
-      icon: '❡'
-    };
-    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-  });
-</script>
-<style>
-  /* place left on bigger screen */
-  @media all and (min-width: 800px) {
-    .anchorjs-link {
-      position: absolute;
-      left: -0.75em;
-      font-size: 1.1em;
-      margin-top: -0.1em;
-    }
-  }
-</style>
-
-<!-- anchorjs end -->
-
+</div>
 
 
 	<!-- Footer (contains ThemeColor、viewer) -->
