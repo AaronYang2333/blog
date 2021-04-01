@@ -216,14 +216,14 @@
 
           
           <li>
-            <a href="/blog/categories/">Categories|分类</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/about/">About|关于</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
@@ -353,6 +353,8 @@
         
         <a href="#CSCI 570" title="CSCI 570" rel="7">CSCI 570</a>
         
+        <a href="#Docker" title="Docker" rel="1">Docker</a>
+        
         <a href="#Vagrant" title="Vagrant" rel="1">Vagrant</a>
         
       </div>
@@ -369,9 +371,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/blog/2021/02/06/AIA-ch3-Q-A/">
+          <a href="/blog/2021/01/21/AIA-ch1-Q-A/">
             <h2 class="post-title">
-              $$[Algorithms \, In \, Action]-CH3\, Heap$$
+              $$[Algorithms \, In \, Action]-CH1\,Review$$
             </h2>
             
           </a>
@@ -399,24 +401,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/blog/2021/01/21/AIA-ch1-Q-A/">
+          <a href="/blog/2021/02/06/AIA-ch3-Q-A/">
             <h2 class="post-title">
-              $$[Algorithms \, In \, Action]-CH1\,Review$$
-            </h2>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/blog/2021/03/22/AIA-ch7-Q-A/">
-            <h2 class="post-title">
-              $$[Algorithms \, In \, Action]-CH7\, Network  \,\, Flow $$
+              $$[Algorithms \, In \, Action]-CH3\, Heap$$
             </h2>
             
           </a>
@@ -462,6 +449,43 @@
           <a href="/blog/2021/03/20/AIA-ch6-Q-A/">
             <h2 class="post-title">
               $$[Algorithms \, In \, Action]-CH6\, Dynamic \,\, Programming $$
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/blog/2021/03/22/AIA-ch7-Q-A/">
+            <h2 class="post-title">
+              $$[Algorithms \, In \, Action]-CH7\, Network  \,\, Flow $$
+            </h2>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Docker">
+          <span class="tag-text">Docker</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/blog/2021/04/01/install-docker-and-docker-compose-on-Ubuntu/">
+            <h2 class="post-title">
+              install docker and docker-compose on Ubuntu
             </h2>
             
           </a>
@@ -993,6 +1017,21 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>

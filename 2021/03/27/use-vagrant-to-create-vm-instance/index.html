@@ -216,14 +216,14 @@
 
           
           <li>
-            <a href="/blog/categories/">Categories|分类</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/about/">About|关于</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
@@ -322,11 +322,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              需要花 <span class="post-count">1</span> 分钟读完
+              需要花 <span class="post-count">3</span> 分钟读完
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              总共 <span class="post-count">91</span> 个字儿
+              总共 <span class="post-count">614</span> 个字儿
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -386,7 +386,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <ol>
+        <h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
 <li><p>goto “<a href="https://app.vagrantup.com/boxes/search" target="_blank" rel="noopener">https://app.vagrantup.com/boxes/search</a>“, and find box you wanna install.<br> E.G. I wanna install ubuntu 14 image.</p>
 </li>
 <li><p>make a dir “vagrant-ubuntu-14” on local machine.<br><img src="1.png"  style="display:inline;box-shadow: none !important;"></p>
@@ -400,11 +400,20 @@
 <li><p>a dir named “.vagrant” appeared.<br> “.vagrant\machines\default\virtualbox” saved your private key, which you can use to connect your virtual image from third-party terminal.<br><img src="5.png"  style="display:inline;box-shadow: none !important;"></p>
 </li>
 </ol>
+<h3 id="Customize-your-vagrant-file"><a href="#Customize-your-vagrant-file" class="headerlink" title="Customize your vagrant file"></a>Customize your vagrant file</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The "2" in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don't change it unless you know what</span></span><br><span class="line"><span class="comment"># you're doing.</span></span><br><span class="line">Vagrant.configure(<span class="string">"2"</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  <span class="comment"># The most common configuration options are documented and commented below.</span></span><br><span class="line">  <span class="comment"># For a complete reference, please see the online documentation at</span></span><br><span class="line">  <span class="comment"># https://docs.vagrantup.com.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line">  <span class="comment"># boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  <span class="comment"># 镜像源设置</span></span><br><span class="line">  config.vm.box = <span class="string">"ubuntu/xenial64"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Disable automatic box update checking. If you disable this, then</span></span><br><span class="line">  <span class="comment"># boxes will only be checked for updates when the user runs</span></span><br><span class="line">  <span class="comment"># `vagrant box outdated`. This is not recommended.</span></span><br><span class="line">  <span class="comment"># 每次启动，需不需要跟镜像源去比较，可能触发更新</span></span><br><span class="line">  <span class="comment"># config.vm.box_check_update = false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine. In the example below,</span></span><br><span class="line">  <span class="comment"># accessing "localhost:8080" will access port 80 on the guest machine.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line">  <span class="comment"># config.vm.network "forwarded_port", guest: 80, host: 8080</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine and only allow access</span></span><br><span class="line">  <span class="comment"># via 127.0.0.1 to disable public access</span></span><br><span class="line">  <span class="comment"># 端口转发规则</span></span><br><span class="line">  config.vm.network <span class="string">"forwarded_port"</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span>, <span class="symbol">host_ip:</span> <span class="string">"127.0.0.1"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a private network, which allows host-only access to the machine</span></span><br><span class="line">  <span class="comment"># using a specific IP.</span></span><br><span class="line">  <span class="comment"># 固定内网IP</span></span><br><span class="line">  <span class="comment"># config.vm.network "private_network", ip: "192.168.33.10"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a public network, which generally matched to bridged network.</span></span><br><span class="line">  <span class="comment"># Bridged networks make the machine appear as another physical device on</span></span><br><span class="line">  <span class="comment"># your network.</span></span><br><span class="line">  <span class="comment"># 固定公网IP</span></span><br><span class="line">  <span class="comment"># config.vm.network "public_network"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line">  <span class="comment"># the path on the host to the actual folder. The second argument is</span></span><br><span class="line">  <span class="comment"># the path on the guest to mount the folder. And the optional third</span></span><br><span class="line">  <span class="comment"># argument is a set of non-required options.</span></span><br><span class="line">  <span class="comment"># 共享文件夹设置</span></span><br><span class="line">  config.vm.synced_folder <span class="string">"./local_data"</span>, <span class="string">"/vm_data"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Provider-specific configuration so you can fine-tune various</span></span><br><span class="line">  <span class="comment"># backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line">  <span class="comment"># Example for VirtualBox:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  config.vm.provider <span class="string">"virtualbox"</span> <span class="keyword">do</span> <span class="params">|vb|</span></span><br><span class="line">    <span class="comment"># Display the VirtualBox GUI when booting the machine</span></span><br><span class="line">    <span class="comment"># vb.gui = true</span></span><br><span class="line">  </span><br><span class="line">    <span class="comment"># Customize the amount of memory on the VM:</span></span><br><span class="line">    <span class="comment"># 内存及核心数</span></span><br><span class="line">    vb.memory = <span class="string">"2048"</span></span><br><span class="line">    vb.cpus = <span class="number">2</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># View the documentation for the provider you are using for more</span></span><br><span class="line">  <span class="comment"># information on available options.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line">  <span class="comment"># Ansible, Chef, Docker, Puppet and Salt are also available. Please see the</span></span><br><span class="line">  <span class="comment"># documentation for more information about their specific syntax and use.</span></span><br><span class="line">  <span class="comment"># 当VM启动时，需要执行的命令</span></span><br><span class="line">  <span class="comment"># config.vm.provision "shell", inline: &lt;&lt;-SHELL</span></span><br><span class="line">  <span class="comment">#   apt-get update</span></span><br><span class="line">  <span class="comment">#   apt-get install -y apache2</span></span><br><span class="line">  <span class="comment"># SHELL</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tips："><a href="#Tips：" class="headerlink" title="Tips："></a>Tips：</h3><ol>
+<li>reload VM</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant reload</span><br></pre></td></tr></table></figure>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
+          
+          <li class="previous">
+            <a href="/blog/2021/04/01/install-docker-and-docker-compose-on-Ubuntu/" data-toggle="tooltip" data-placement="top" title="install docker and docker-compose on Ubuntu">&larr; Previous</a>
+          </li>
           
           
           <li class="next">
@@ -592,7 +601,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Steps"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Steps</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Customize-your-vagrant-file"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Customize your vagrant file</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Tips："><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Tips：</span></a></li></ol>
         
         </div>
       </aside>
@@ -1181,6 +1190,21 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>

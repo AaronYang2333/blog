@@ -216,14 +216,14 @@
 
           
           <li>
-            <a href="/blog/categories/">Categories|分类</a>
+            <a href="/blog/about/">About|关于</a>
           </li>
           
           
 
           
           <li>
-            <a href="/blog/about/">About|关于</a>
+            <a href="/blog/categories/">Categories|分类</a>
           </li>
           
           
@@ -376,6 +376,21 @@
           <span class="tag-text">2021</span>
         </span>
         <ul>
+          
+          <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+          <li>
+            04-01
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/blog/2021/04/01/install-docker-and-docker-compose-on-Ubuntu/" style="color: #0085a1">
+              <span>
+                install docker and docker-compose on Ubuntu
+              </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          </li>
           
           <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -609,6 +624,10 @@
     
     <a href="/blog/categories/#CSCI 570">
       <li>CSCI 570</li>
+    </a>
+    
+    <a href="/blog/categories/#Docker">
+      <li>Docker</li>
     </a>
     
     <a href="/blog/categories/#Vagrant">
@@ -1138,6 +1157,21 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 	<!-- <img src="https://aaronyang2333.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
 	<!-- Migrate from head to bottom, no longer block render and still work -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
